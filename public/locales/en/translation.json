@@ -1,0 +1,298 @@
+{
+  "global": {
+    "loading": "Loading..."
+  },
+  "siteName": "Giovan Christoffel Sihombing",
+  "nav": {
+    "about": "About",
+    "education": "Education",
+    "experience": "Experience",
+    "featured": "Featured",
+    "allProjects": "All Projects",
+    "downloadCV": "Download CV",
+    "contact": "Contact",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu"
+  },
+  "homePage": {
+    "greeting": "My name is Giovan.",
+    "introduction": "A highly curious Computer Engineering Student, I thrive on tackling new challenges and diving deep into the ever-evolving world of technology. While experienced in software and hardware development, my enthusiasm extends broadly, with a significant interest in the intricacies of CPU design and the transformative potential of AI/Machine Learning.",
+    "viewProjects": "View My Work",
+    "contactMe": "Contact Me"
+  },
+  "aboutMe": {
+    "title": "About Me",
+    "introduction": "Hello! I'm Giovan, a dedicated and results-oriented Computer Engineering Student at the University of Indonesia with a passion for crafting efficient solutions, whether in software or hardware. I thrive in collaborative environments and am always eager to learn new technologies and take on challenging projects.",
+    "keyAreasTitle": "My Key Areas:",
+    "areaBackend": "Strong proficiency in Backend Development (Node.js, Express.js, Python, API Design, PostgreSQL).",
+    "areaVHDL": "Skilled VHDL Developer with an interest in CPU design, FPGAs, and digital logic.",
+    "areaAI": "Keen interest and foundational knowledge in Artificial Intelligence (AI) and Machine Learning concepts.",
+    "skillsSectionTitle": "My Technical Skills",
+    "skills": {
+      "languagesTitle": "Programming Languages",
+      "languagesList": [
+        "JavaScript (ES6+)",
+        "Python",
+        "Java",
+        "C/C++",
+        "VHDL",
+        "SQL",
+        "HTML5 & CSS3",
+        "Golang (Basic)"
+      ],
+      "frameworksLibrariesTitle": "Frameworks & Libraries",
+      "frameworksLibrariesList": [
+        "Node.js & Express.js",
+        "React",
+        "Tailwind CSS",
+        "WordPress",
+        "Framer Motion"
+      ],
+      "toolsPlatformsTitle": "Tools & Platforms",
+      "toolsPlatformsList": [
+        "Git & GitHub",
+        "Docker",
+        "Linux",
+        "Postman",
+        "ModelSim",
+        "Xilinx Vivado",
+        "Google Cloud (Vertex AI)"
+      ],
+      "databasesTitle": "Databases",
+      "databasesList": [
+        "PostgreSQL",
+        "MongoDB"
+      ],
+      "otherTitle": "Other",
+      "otherList": [
+        "Digital System & FPGA Design",
+        "Software Development",
+        "Computer Networks (Cisco Basics)",
+        "DevOps (Basic)",
+        "Project Management (Basic)"
+      ]
+    }
+  },
+  "education": {
+    "title": "Education",
+    "gpaLabel": "GPA: 3.61/4.00",
+    "achievementsTitle": "Key Achievements & Coursework:",
+    "entries": [
+      {
+        "institution": "University of Indonesia",
+        "degree": "B.Eng. (Bachelor of Engineering), Computer Engineering",
+        "period": "August 2022 - August 2026 (Expected)",
+        "gpa": "Not Available",
+        "achievements": [
+          "AEON 1% Club Foundation Scholarship Awardee (December 2024)",
+          "Digital Laboratory Assistant, Department of Electrical Engineering",
+          "Relevant Coursework: Digital Systems, Basic C Programming, Digital System Design, Basic Computing, Advanced C Programming, Digital System Design with VHDL (FPGA)"
+        ]
+      }
+    ]
+  },
+  "employmentHistory": {
+    "title": "Experience & Organizational Roles",
+    "entries": [
+      {
+        "company": "University of Indonesia (UI), Depok",
+        "position": "Digital Laboratory Assistant",
+        "period": "August 2023 - Present (1 year 10 months)",
+        "location": "Depok, West Java",
+        "responsibilities": [
+          "Assisting in the development of digital experiments to enhance students' practical experience.",
+          "Providing technical support to students and the department in the use of laboratory equipment and software.",
+          "Maintaining and upgrading laboratory equipment to support learning.",
+          "Supporting practical lab sessions for various courses including Fundamentals of Digital Systems, Basic C Programming, Digital System Design, Basic Computing, Advanced C Programming, and Digital System Design with VHDL (FPGA).",
+          "Special Projects: Established the server environment for the Digital Laboratory using Linux, Docker, and network configuration; Implemented a new Learning Management System (LMS) for Digilab utilizing Docker and tunneling technology; Developed and integrated an auto-checker system for practical assignments."
+        ]
+      },
+      {
+        "company": "Wiradha UI (University of Indonesia Public Relations)",
+        "position": "Web Developer (Internship)",
+        "period": "July 2024 - January 2025 (6 months)",
+        "location": "Depok, West Java",
+        "responsibilities": [
+          "Managed and developed the official university website (ui.ac.id) using WordPress, which attracted over 5.5 million accesses during the internship period.",
+          "Supported major events organized by UI, such as the 2024 Graduation Event and the UI International Education Expo 2024.",
+          "Collaborated with the design team to create creative publications and congratulatory posters.",
+          "Uploaded the latest press releases and ensured timely updates of event schedules on the website."
+        ]
+      },
+      {
+        "company": "EXERCISE FTUI (Executive Organization of Students of Engineering Faculty of Universitas Indonesia)",
+        "position": "Vice President",
+        "period": "January 2024 - January 2025 (1 year 1 month)",
+        "location": "Depok, West Java",
+        "responsibilities": [
+          "Oversaw strategic planning and operational execution to ensure the organization met its objectives effectively.",
+          "Managed divisions and their respective teams, aligning their initiatives with the organization's long-term vision.",
+          "Led the backend development team for the PEMIRA-eVoting application, which successfully supported over 2,700 voters with more than 40,000 accesses.",
+          "Applied technical expertise in development and DevOps engineering to ensure efficient, scalable, and secure application delivery."
+        ]
+      },
+      {
+          "company": "EXERCISE FTUI",
+          "position": "Staff of Project Software",
+          "period": "February 2023 - January 2024 (1 year)",
+          "location": "Depok, West Java",
+          "responsibilities": [
+            "Instrumental in designing and developing software solutions for several ongoing projects.",
+            "Designed UI/UX for an IoT application to monitor the condition of the elderly.",
+            "Created a Node.js library to prevent SQL injection, XSS attacks, and manage IP blacklists/whitelists as middleware.",
+            "Acted as a Backend developer in digitizing the project flow from KarsaBuana Lab, using ExpressJS and MongoDB, and ensured API endpoints functioned correctly using Postman."
+          ]
+      }
+    ]
+  },
+  "featuredProjects": {
+    "title": "Featured Projects",
+    "description": "Here are some of the projects I'm proud to have worked on.",
+    "noProjects": "No featured projects to display.",
+    "viewAll": "View All Projects"
+  },
+  "allProjectsPage": {
+    "title": "All My Projects",
+    "description": "Here's a collection of projects I've worked on. Explore them all!",
+    "noProjects": "No projects to display at the moment.",
+    "backToHome": "← Back to Home",
+    "imageNotFound": "Image Not Found",
+    "liveLink": "Live Demo",
+    "repoLink": "GitHub"
+  },
+  "projectsData": [
+    {
+      "id": "eVotingPemiraFTUI2024",
+      "title": "PEMIRA FTUI 2024 eVoting Application",
+      "description": "Led the software team and developed robust backend features using Node.js, Express.js, and PostgreSQL for a secure and efficient e-voting system. Integrated Redis for caching, JWT for authentication, Winston for logging, and deployed using Docker & Docker Compose. Successfully served over 2,700 voters.",
+      "tags": ["Express.js", "Backend", "JavaScript", "PostgreSQL", "Docker"],
+      "liveLink": null,
+      "repoLink": null,
+      "images": ["./images/pemira/1.jpeg", "./images/pemira/2.jpeg"]
+    },
+    {
+      "id": "ecoShopper",
+      "title": "EcoShopper",
+      "description": "Developed a web application to encourage sustainable consumption by offering eco-friendly alternatives. Led the development of a dynamic database and a recommendation algorithm assessing the environmental impact of products. Supports SDGs 12, 13, and 15.",
+      "tags": ["Frontend", "Backend", "JavaScript", "MongoDB", "Express.js", "React", "Docker"],
+      "liveLink": null,
+      "repoLink": null,
+      "repoLinkFE": "https://github.com/PhoebeIvana/RPL_frontend",
+      "repoLinkBE": "https://github.com/MorpKnight/EcoShopper-BE",
+      "images": ["./images/ecoshopper/1.jpeg", "./images/ecoshopper/2.jpeg", "./images/ecoshopper/3.jpeg", "./images/ecoshopper/4.jpeg", "./images/ecoshopper/5.jpeg", "./images/ecoshopper/6.jpeg"]
+    },
+    {
+      "id": "riscvCPU16bit",
+      "title": "RISCV CPU 16-bit (FPGA)",
+      "description": "Designed and simulated an FPGA-based CPU using VHDL. Implemented components such as ALU, register file, and decoder. Utilized ModelSim and Xilinx Vivado for simulation and synthesis.",
+      "tags": ["VHDL", "FPGA"],
+      "liveLink": null,
+      "repoLink": "https://github.com/Digilab-UI/case-study-modul-9",
+      "images": ["./images/riscv/1.png", "./images/riscv/2.png"]
+    },
+    {
+      "id": "karsaBuanaLab",
+      "title": "KarsaBuana Lab Backend Development",
+      "description": "Responsible for backend development, designing and implementing data handling and processing infrastructure. Developed APIs for robust data interaction and ensured backend scalability.",
+      "tags": ["Express.js", "Backend", "MongoDB", "Docker"],
+      "liveLink": null,
+      "repoLink": null,
+      "repoLinkFE": "https://github.com/ExerciseFTUI/KarsaBuanaLab-FE",
+      "repoLinkBE": "https://github.com/ExerciseFTUI/KarsaBuanaLab-BE",
+      "images": ["./images/karsa/1.png", "./images/karsa/2.png", "./images/karsa/3.png", "./images/karsa/4.png", "./images/karsa/5.png", "./images/karsa/6.png", "./images/karsa/7.png"]
+    },
+    {
+      "id": "1xBidPlatform",
+      "title": "1xBid Bidding Platform",
+      "description": "Contributed to the backend architecture and frontend development of a real-time bidding platform. Integrated essential features like user authentication, real-time data processing, and secure transaction handling.",
+      "tags": ["Backend", "Frontend", "JavaScript", "Express.js", "React", "PostgreSQL", "Docker"],
+      "liveLink": null,
+      "repoLink": "https://github.com/MorpKnight/1xBid",
+      "images": ["./images/1xbid/1.png", "./images/1xbid/2.png", "./images/1xbid/3.png", "./images/1xbid/4.png", "./images/1xbid/5.png", "./images/1xbid/6.png", "./images/1xbid/7.png"]
+    },
+    {
+      "id": "portfolioWebsite",
+      "title": "Personal Portfolio Website",
+      "description": "Designed and developed a responsive portfolio website to showcase professional journey, skills, experiences, and projects. Built with React, Tailwind CSS, and Framer Motion with i18next for multi-language support.",
+      "tags": ["React", "Frontend", "JavaScript", "React", "Docker"],
+      "liveLink": "https://giovanchristoffel.live/",
+      "repoLink": "https://github.com/MorpKnight/PortfolioV2-Public"
+    },
+    {
+      "id": "mightyShield",
+      "title": "MightyShield - JS Security Library",
+      "description": "Created a JavaScript (Node.js) library to provide essential cybersecurity functionalities, including SQL injection prevention, XSS attack mitigation, and IP blacklist/whitelist management as middleware.",
+      "tags": ["Backend", "JavaScript"],
+      "liveLink": "https://www.npmjs.com/package/@exerciseftui/mightyshield",
+      "repoLink": "https://github.com/ExerciseFTUI/MightyShield",
+      "images": ["./images/mightyshield/1.png", "./images/mightyshield/2.png"]
+    },
+    {
+      "id": "imageColorScalerFPGA",
+      "title": "Image-ColorScaler (VHDL/FPGA)",
+      "description": "Developed an Image-ColorScaler system using VHDL on an FPGA to transform colored images into grayscale and other color scales (greenscale, redscale, bluescale) to simplify image processing.",
+      "tags": ["VHDL", "FPGA"],
+      "liveLink": null,
+      "repoLink": "https://github.com/MorpKnight/Image-ColorScaler"
+    },
+    {
+      "id": "jBusApp",
+      "title": "JBus Bus Ordering Simulation App",
+      "description": "Final project for OOP course, creating backend and frontend for the JBus application to simulate bus ordering.",
+      "tags": ["Backend", "Frontend", "Mobile", "Java", "Spring Boot", "Android", "XML"],
+      "liveLink": null,
+      "repoLink": null,
+      "repoLinkFE": "https://github.com/MorpKnight/JBus-android",
+      "repoLinkBE": "https://github.com/MorpKnight/JBus"
+    },
+    {
+      "id": "discordBot",
+      "title": "Discord Bot - Python",
+      "description": "Created a Discord bot using Python to help organize personal Discord servers.",
+      "tags": ["Backend", "Python"],
+      "liveLink": null,
+      "repoLink": "https://github.com/MorpKnight/discord-bot"
+    },
+    {
+      "id": "Bluetooth Apps Smartwatch",
+      "title": "BluetoothApps Smartwatch (UI Design)",
+      "description": "Designed and implemented the User Interface (UI) for a smartwatch application intended to monitor and manage the medical records of elderly individuals, ensuring ease of use.",
+      "tags": ["Mobile", "Android", "UI/UX", "XML"],
+      "liveLink": null,
+      "repoLink": "https://github.com/ivanpahlevi8/BluetoothApps"
+    }
+  ],
+  "downloadCV": {
+    "title": "Download My CV",
+    "description": "Interested in learning more about my professional background? Download my CV for a detailed review.",
+    "buttonText": "Download CV",
+    "portofolioButtonText": "Download Portfolio",
+    "fileNameNote": "(CV File Name: Giovan_Sihombing.pdf - Ensure the file is in the `public` directory.)"
+  },
+  "contactMe": {
+    "title": "Contact Me",
+    "description": "I am currently open to new opportunities and collaborations. Feel free to reach out!",
+    "emailPrompt": "You can email me at: christoffelsihombing@gmail.com",
+    "socialPrompt": "Or find me on social media:",
+    "form": {
+      "title": "Contact Form",
+      "name": "Name",
+      "phone": "Phone Number (Optional)",
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Message",
+      "sendButton": "Send Message",
+      "closeAriaLabel": "Close Form"
+    },
+    "openFormButton": "Send a Direct Inquiry"
+  },
+  "footer": {
+    "copyright": "© {{year}} {{siteName}}. All Rights Reserved.",
+    "builtWith": "Built with React & Tailwind CSS. Deployed on [Your Hosting, e.g., Vercel, Netlify, GitHub Pages].",
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "twitter": "X (formerly Twitter)"
+    }
+  }
+}

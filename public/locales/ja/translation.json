@@ -1,0 +1,298 @@
+{
+  "global": {
+    "loading": "読み込み中..."
+  },
+  "siteName": "ジョバン・クリストフェル・シホンビン",
+  "nav": {
+    "about": "私について",
+    "education": "学歴",
+    "experience": "職務経歴",
+    "featured": "注目プロジェクト",
+    "allProjects": "全プロジェクト",
+    "downloadCV": "履歴書ダウンロード",
+    "contact": "お問い合わせ",
+    "openMenu": "ナビゲーションメニューを開く",
+    "closeMenu": "ナビゲーションメニューを閉じる"
+  },
+  "homePage": {
+    "greeting": "ジョバンと申します。",
+    "introduction": "コンピューター工学を学ぶ学生として、旺盛な好奇心を持ち、新たな挑戦や進化し続けるテクノロジーの世界への探求に情熱を注いでいます。ソフトウェアとハ​​ードウェア開発の経験を活かしつつ、CPU設計の複雑さやAI/機械学習の革新的な可能性にも強い関心と意欲を持って取り組んでいます。",
+    "viewProjects": "実績を見る",
+    "contactMe": "お問い合わせ"
+  },
+  "aboutMe": {
+    "title": "私について",
+    "introduction": "こんにちは！インドネシア大学でコンピューター工学を学ぶジョバンです。ソフトウェア、ハードウェアを問わず、効率的なソリューションの構築に情熱を注ぐ、献身的で結果志向の学生です。協調的な環境で能力を発揮し、常に新しい技術を学び、挑戦的なプロジェクトに取り組む意欲に溢れています。",
+    "keyAreasTitle": "主な専門分野：",
+    "areaBackend": "バックエンド開発における高い専門性（Node.js、Express.js、Python、API設計、PostgreSQL）。",
+    "areaVHDL": "CPU設計、FPGA、デジタル論理に関心を持つ、熟練したVHDL開発者。",
+    "areaAI": "人工知能（AI）および機械学習の概念に関する深い関心と基礎知識。",
+    "skillsSectionTitle": "テクニカルスキル",
+    "skills": {
+      "languagesTitle": "プログラミング言語",
+      "languagesList": [
+        "JavaScript (ES6+)",
+        "Python",
+        "Java",
+        "C/C++",
+        "VHDL",
+        "SQL",
+        "HTML5 & CSS3",
+        "Golang (基礎)"
+      ],
+      "frameworksLibrariesTitle": "フレームワーク & ライブラリ",
+      "frameworksLibrariesList": [
+        "Node.js & Express.js",
+        "React",
+        "Tailwind CSS",
+        "WordPress",
+        "Framer Motion"
+      ],
+      "toolsPlatformsTitle": "ツール & プラットフォーム",
+      "toolsPlatformsList": [
+        "Git & GitHub",
+        "Docker",
+        "Linux",
+        "Postman",
+        "ModelSim",
+        "Xilinx Vivado",
+        "Google Cloud (Vertex AI)"
+      ],
+      "databasesTitle": "データベース",
+      "databasesList": [
+        "PostgreSQL",
+        "MongoDB"
+      ],
+      "otherTitle": "その他",
+      "otherList": [
+        "デジタルシステム & FPGA設計",
+        "ソフトウェア開発",
+        "コンピュータネットワーク（Cisco基礎）",
+        "DevOps (基礎)",
+        "プロジェクト管理 (基礎)"
+      ]
+    }
+  },
+  "education": {
+    "title": "学歴",
+    "gpaLabel": "GPA: 3.61/4.00",
+    "achievementsTitle": "主な実績とコースワーク：",
+    "entries": [
+      {
+        "institution": "インドネシア大学",
+        "degree": "工学士、コンピューター工学",
+        "period": "2022年8月 - 2026年8月 (予定)",
+        "gpa": "該当なし",
+        "achievements": [
+          "イオン1％クラブ財団奨学生 (2024年12月)",
+          "電気工学科 デジタルラボラトリーアシスタント",
+          "関連コースワーク：デジタルシステム、C言語基礎プログラミング、デジタルシステム設計、基礎コンピューティング、C言語上級プログラミング、VHDLによるデジタルシステム設計（FPGA）"
+        ]
+      }
+    ]
+  },
+  "employmentHistory": {
+    "title": "職務経歴・組織活動",
+    "entries": [
+      {
+        "company": "インドネシア大学 (UI), デポック",
+        "position": "デジタルラボラトリーアシスタント",
+        "period": "2023年8月 - 現在 (1年10ヶ月)",
+        "location": "西ジャワ州デポック",
+        "responsibilities": [
+          "学生の実践的経験を向上させるためのデジタル実験開発支援。",
+          "実験装置およびソフトウェアの使用に関する学生および学科への技術サポート提供。",
+          "学習支援のための実験装置の維持管理およびアップグレード。",
+          "デジタルシステム基礎、C言語基礎プログラミング、デジタルシステム設計、基礎コンピューティング、C言語上級プログラミング、VHDLによるデジタルシステム設計（FPGA）など、様々なコースの実習セッションサポート。",
+          "特別プロジェクト：Linux、Docker、ネットワーク構成を用いたデジタルラボラトリーのサーバー環境構築。Dockerおよびトンネリング技術を利用したDigilab向け新学習管理システム（LMS）の導入。実習課題の自動採点システムの開発と統合。"
+        ]
+      },
+      {
+        "company": "ウィラダUI (インドネシア大学広報部)",
+        "position": "ウェブ開発者 (インターンシップ)",
+        "period": "2024年7月 - 2025年1月 (6ヶ月)",
+        "location": "西ジャワ州デポック",
+        "responsibilities": [
+          "WordPressを使用した大学公式サイト（ui.ac.id）の管理および開発。インターンシップ期間中に550万以上のアクセスを獲得。",
+          "2024年卒業式やUI国際教育エキスポ2024など、UI主催の主要イベントのサポート。",
+          "デザインチームと協力し、クリエイティブな出版物や祝賀ポスターを作成。",
+          "最新プレスリリースのアップロードと、ウェブサイト上のイベントスケジュールのタイムリーな更新を保証。"
+        ]
+      },
+      {
+        "company": "EXERCISE FTUI (インドネシア大学工学部学生執行組織)",
+        "position": "副会長",
+        "period": "2024年1月 - 2025年1月 (1年1ヶ月)",
+        "location": "西ジャワ州デポック",
+        "responsibilities": [
+          "組織が効果的に目標を達成するための戦略計画および業務執行の監督。",
+          "各部門とそのチームを管理し、組織の長期ビジョンと彼らの取り組みを整合。",
+          "PEMIRA-eVotingアプリケーションのバックエンド開発チームを主導し、2,700人以上の有権者と40,000以上のアクセスを成功裏にサポート。",
+          "効率的でスケーラブルかつ安全なアプリケーション配信を保証するための開発およびDevOpsエンジニアリングにおける技術的専門知識の適用。"
+        ]
+      },
+      {
+          "company": "EXERCISE FTUI",
+          "position": "ソフトウェアプロジェクトスタッフ",
+          "period": "2023年2月 - 2024年1月 (1年間)",
+          "location": "西ジャワ州デポック",
+          "responsibilities": [
+            "進行中のいくつかのプロジェクトにおけるソフトウェアソリューションの設計および開発において重要な役割を果たす。",
+            "高齢者の状態を監視するためのIoTアプリケーションのUI/UX設計。",
+            "SQLインジェクション、XSS攻撃を防止し、IPブラックリスト/ホワイトリストをミドルウェアとして管理するためのNode.jsライブラリを作成。",
+            "ExpressJSとMongoDBを使用し、KarsaBuana Labのプロジェクトフローのデジタル化におけるバックエンド開発者として活動。Postmanを使用してAPIエンドポイントが正しく機能することを保証。"
+          ]
+      }
+    ]
+  },
+  "featuredProjects": {
+    "title": "注目プロジェクト",
+    "description": "私が誇りに思うプロジェクトの一部です。",
+    "noProjects": "表示する注目プロジェクトはありません。",
+    "viewAll": "全プロジェクトを見る"
+  },
+  "allProjectsPage": {
+    "title": "私の全プロジェクト",
+    "description": "私が手がけたプロジェクトのコレクションです。どうぞご覧ください！",
+    "noProjects": "現在表示するプロジェクトはありません。",
+    "backToHome": "← ホームに戻る",
+    "imageNotFound": "画像が見つかりません",
+    "liveLink": "ライブデモ",
+    "repoLink": "GitHub"
+  },
+  "projectsData": [
+    {
+      "id": "eVoting Pemira FTUI2024",
+      "title": "PEMIRA FTUI 2024 eVotingアプリケーション",
+      "description": "ソフトウェアチームを率い、Node.js、Express.js、PostgreSQLを使用して、安全で効率的な電子投票システムの堅牢なバックエンド機能を開発。キャッシングにRedis、認証にJWT、ロギングにWinstonを統合し、DockerとDocker Composeを使用して展開。2,700人以上の有権者にサービスを提供。",
+      "tags": ["Express.js", "Backend", "JavaScript", "PostgreSQL", "Docker"],
+      "liveLink": null,
+      "repoLink": null,
+      "images": ["./images/pemira/1.jpeg", "./images/pemira/2.jpeg"]
+    },
+    {
+      "id": "ecoShopper",
+      "title": "EcoShopper (エコショッパー)",
+      "description": "環境に優しい代替品を提案することで持続可能な消費を促進するウェブアプリケーションを開発。製品の環境負荷を評価する動的データベースと推薦アルゴリズム開発を主導。SDGs 12、13、15をサポート。",
+      "tags": ["Frontend", "Backend", "JavaScript", "MongoDB", "Express.js", "React", "Docker"],
+      "liveLink": null,
+      "repoLink": null,
+      "repoLinkFE": "https://github.com/PhoebeIvana/RPL_frontend",
+      "repoLinkBE": "https://github.com/MorpKnight/EcoShopper-BE",
+      "images": ["./images/ecoshopper/1.jpeg", "./images/ecoshopper/2.jpeg", "./images/ecoshopper/3.jpeg", "./images/ecoshopper/4.jpeg", "./images/ecoshopper/5.jpeg", "./images/ecoshopper/6.jpeg"]
+    },
+    {
+      "id": "riscvCPU16bit",
+      "title": "RISCV CPU 16ビット (FPGA)",
+      "description": "VHDLを使用してFPGAベースのCPUを設計・シミュレーション。ALU、レジスタファイル、デコーダなどのコンポーネントを実装。シミュレーションと合成にModelSimとXilinx Vivadoを利用。",
+      "tags": ["VHDL", "FPGA"],
+      "liveLink": null,
+      "repoLink": "https://github.com/Digilab-UI/case-study-modul-9",
+      "images": ["./images/riscv/1.png", "./images/riscv/2.png"]
+    },
+    {
+      "id": "karsaBuanaLab",
+      "title": "KarsaBuana Lab バックエンド開発",
+      "description": "バックエンド開発を担当し、データ処理インフラストラクチャを設計・実装。堅牢なデータインタラクションのためのAPIを開発し、バックエンドのスケーラビリティを確保。",
+      "tags": ["Express.js", "Backend", "MongoDB", "Docker"],
+      "liveLink": null,
+      "repoLink": null,
+      "repoLinkFE": "https://github.com/ExerciseFTUI/KarsaBuanaLab-FE",
+      "repoLinkBE": "https://github.com/ExerciseFTUI/KarsaBuanaLab-BE",
+      "images": ["./images/karsa/1.png", "./images/karsa/2.png", "./images/karsa/3.png", "./images/karsa/4.png", "./images/karsa/5.png", "./images/karsa/6.png", "./images/karsa/7.png"]
+    },
+    {
+      "id": "1xBidplatform",
+      "title": "1xBid 入札プラットフォーム",
+      "description": "リアルタイム入札プラットフォームのバックエンドアーキテクチャとフロントエンド開発に貢献。ユーザー認証、リアルタイムデータ処理、安全なトランザクション処理などの重要機能を統合。",
+      "tags": ["Backend", "Frontend", "JavaScript", "Express.js", "React", "PostgreSQL", "Docker"],
+      "liveLink": null,
+      "repoLink": "https://github.com/MorpKnight/1xBid",
+      "images": ["./images/1xbid/1.png", "./images/1xbid/2.png", "./images/1xbid/3.png", "./images/1xbid/4.png", "./images/1xbid/5.png", "./images/1xbid/6.png", "./images/1xbid/7.png"]
+    },
+    {
+      "id": "portfolioWebsite",
+      "title": "個人ポートフォリオサイト",
+      "description": "職務経歴、スキル、経験、プロジェクトを紹介するレスポンシブなポートフォリオサイトを設計・開発。React、Tailwind CSS、Framer Motionを使用し、多言語対応のためにi18nextを導入。",
+      "tags": ["React", "Frontend", "JavaScript", "React", "Docker"],
+      "liveLink": "https://giovanchristoffel.live/",
+      "repoLink": "https://github.com/MorpKnight/PortfolioV2-Public"
+    },
+    {
+      "id": "mightyShield",
+      "title": "MightyShield - JSセキュリティライブラリ",
+      "description": "SQLインジェクション防止、XSS攻撃対策、ミドルウェアとしてのIPブラックリスト/ホワイトリスト管理など、重要なサイバーセキュリティ機能を提供するJavaScript (Node.js) ライブラリを作成。",
+      "tags": ["Backend", "JavaScript"],
+      "liveLink": null,
+      "repoLink": "https://github.com/ExerciseFTUI/MightyShield",
+      "images": ["./images/mightyshield/1.png", "./images/mightyshield/2.png"]
+    },
+    {
+      "id": "imageColorScalerFPGA",
+      "title": "Image-ColorScaler (VHDL/FPGA)",
+      "description": "VHDLを使用してFPGA上にImage-ColorScalerシステムを開発し、カラー画像をグレースケールや他のカラースケール（グリーンスケール、レッドスケール、ブルースケール）に変換して画像処理を簡素化。",
+      "tags": ["VHDL", "FPGA"],
+      "liveLink": null,
+      "repoLink": "https://github.com/MorpKnight/Image-ColorScaler"
+    },
+    {
+      "id": "jBusApp",
+      "title": "JBus バス予約シミュレーションアプリ",
+      "description": "OOPコースの最終プロジェクトとして、バス予約をシミュレートするJBusアプリケーションのバックエンドとフロントエンドを作成。",
+      "tags": ["Backend", "Frontend", "Mobile", "Java", "Spring Boot", "Android", "XML"],
+      "liveLink": null,
+      "repoLink": null,
+      "repoLinkFE": "https://github.com/MorpKnight/JBus-android",
+      "repoLinkBE": "https://github.com/MorpKnight/JBus"
+    },
+    {
+      "id": "discordBot",
+      "title": "Discord ボット - Python",
+      "description": "個人のDiscordサーバーの整理を助けるためにPythonを使用してDiscordボットを作成。",
+      "tags": ["Backend", "Python"],
+      "liveLink": null,
+      "repoLink": "https://github.com/MorpKnight/discord-bot"
+    },
+    {
+      "id": "bluetoothAppsSmartwatch",
+      "title": "Bluetooth Apps スマートウォッチ (UIデザイン)",
+      "description": "高齢者の医療記録を監視・管理するために設計されたスマートウォッチアプリケーションのユーザーインターフェース（UI）を設計・実装し、使いやすさを確保。",
+      "tags": ["Mobile", "Android", "UI/UX", "XML"],
+      "liveLink": null,
+      "repoLink": "https://github.com/ivanpahlevi8/BluetoothApps"
+    }
+  ],
+  "downloadCV": {
+    "title": "履歴書ダウンロード",
+    "description": "私の職務経歴についてさらに詳しく知りたいですか？詳細なレビューのために私の履歴書をダウンロードしてください。",
+    "buttonText": "履歴書ダウンロード",
+    "portofolioButtonText": "ポートフォリオをダウンロード",
+    "fileNameNote": "(履歴書ファイル名: Giovan_Sihombing.pdf - ファイルが `public` ディレクトリにあることを確認してください。)"
+  },
+  "contactMe": {
+    "title": "お問い合わせ",
+    "description": "現在、新しい機会やコラボレーションを歓迎しています。お気軽にご連絡ください！",
+    "emailPrompt": "メールでのお問い合わせはこちら：christoffelsihombing@gmail.com",
+    "socialPrompt": "または、ソーシャルメディアでも私を見つけることができます：",
+    "form": {
+      "title": "お問い合わせフォーム",
+      "name": "お名前",
+      "phone": "電話番号 (任意)",
+      "email": "メールアドレス",
+      "subject": "件名",
+      "message": "メッセージ",
+      "sendButton": "メッセージを送信",
+      "closeAriaLabel": "フォームを閉じる"
+    },
+    "openFormButton": "直接問い合わせる"
+  },
+  "footer": {
+    "copyright": "© {{year}} {{siteName}}. 無断複写・転載を禁じます。",
+    "builtWith": "React と Tailwind CSS で構築。 [ホスティングプロバイダー名, 例: Vercel, Netlify, GitHub Pages] で展開。",
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "twitter": "X (旧Twitter)"
+    }
+  }
+}
