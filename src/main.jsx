@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AppLayout from './App.jsx';
 import HomePage from './pages/home-page.jsx';
 import AllProjectsPage from './pages/all-projects-page.jsx';
+import LoadingSpinner from './components/loading-spinner';
 
 import './i18next.js'
 
@@ -15,7 +16,7 @@ import "slick-carousel/slick/slick-theme.css";
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     {/* Wrap your app with Suspense for lazy loading translations */}
-    <Suspense fallback="Loading...">
+    <Suspense fallback={<LoadingSpinner />}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<AppLayout />}>

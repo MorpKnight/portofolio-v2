@@ -5,6 +5,7 @@ import Footer from './components/footer';
 import { Github, Linkedin, MessageCircleMore, Twitter } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 import "./App.css";
 
@@ -55,6 +56,7 @@ export default function AppLayout() {
   return (
     <div className="min-h-screen bg-[#212121] text-violet-200 font-sans flex flex-col">
       <Analytics />
+      <SpeedInsights />
       <Navbar />
       <main className="flex-grow">
          <Outlet context={{ socialLinks }} />
