@@ -4,7 +4,7 @@ import Navbar from './components/navbar';
 import Footer from './components/footer';
 import { Github, Linkedin, MessageCircleMore, Twitter } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from '@vercel/analytics/react';
 
 import "./App.css";
 
