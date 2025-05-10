@@ -47,7 +47,7 @@ export default function AppLayout() {
       label: "X (formerly Twitter)",
     },
     {
-      href: "https://wa.me/62812083891",
+      href: "https://wa.me/6281281083891",
       icon: <MessageCircleMore size={24} />,
       label: "Whatsapp",
     }

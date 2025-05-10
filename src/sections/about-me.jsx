@@ -1,6 +1,5 @@
-// src/sections/about-me.jsx
 import React from 'react';
-import { UserCircle, Code, Zap, Terminal, Database, Brain, Server, Cpu } from 'lucide-react'; // Pastikan semua ikon diimpor
+import { UserCircle, Code, Zap, Terminal, Database, Brain, Server, Cpu } from 'lucide-react';
 import { useTranslation, Trans } from 'react-i18next';
 
 function About() {
@@ -37,21 +36,18 @@ function About() {
   return (
     <section id="about" className="py-16 md:py-24 bg-neutral-900 relative z-10">
       <div className="container mx-auto px-6">
-        {/* Wrapper utama untuk konten About Me, mengikuti struktur awal file Anda */}
-        <div className="text-center"> {/* mb-12 original ada di sini, bisa dihapus jika section ini adalah yang terakhir sebelum footer atau jika padding section sudah cukup */}
+        <div className="text-center">
           
           <UserCircle className="mx-auto text-violet-400 mb-4" size={48} />
           <h2 className="text-3xl font-bold mb-4 color-shift">{t('aboutMe.title')}</h2>
           
-          {/* Paragraf perkenalan, mb-6 original, kita bisa tambah jadi mb-10 untuk jarak lebih */}
           <p className="text-violet-200 max-w-3xl mx-auto leading-relaxed mb-10">
             <Trans i18nKey="aboutMe.introduction">
               Hello! I'm Giovan, a dedicated and results-oriented <span className="font-semibold text-violet-300">[Your Role Here]</span> with a passion for crafting efficient solutions, whether in software or hardware. I thrive in collaborative environments and am always eager to learn new technologies and take on challenging projects.
             </Trans>
           </p>
           
-          {/* Bagian Key Areas - DESAIN ASLI DIKEMBALIKAN */}
-          <div className="max-w-3xl mx-auto text-left md:text-center mb-12"> {/* Wrapper Key Areas asli, tambahkan mb-12 untuk jarak ke Tech & Skills */}
+          <div className="max-w-3xl mx-auto text-left md:text-center mb-12">
             <h3 className="text-xl font-semibold text-violet-300 mb-3 text-center">{t('aboutMe.keyAreasTitle')}</h3>
             <ul className="space-y-2 text-violet-200 inline-block text-left">
               <li className="flex items-center">

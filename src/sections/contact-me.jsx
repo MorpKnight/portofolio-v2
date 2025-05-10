@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Mail, Send, X } from 'lucide-react'; // Tambahkan Send dan X
+import { Mail, Send, X } from 'lucide-react';
 import { useTranslation, Trans } from 'react-i18next';
-import { motion, AnimatePresence } from 'framer-motion'; // Untuk animasi
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function ContactMe({ socialLinks }) {
   const { t } = useTranslation();
@@ -32,7 +32,6 @@ export default function ContactMe({ socialLinks }) {
             </a>
           </p>
 
-          {/* Tombol untuk membuka form */}
           <div className="text-center mt-6">
             <button
               onClick={openForm}
@@ -67,7 +66,6 @@ export default function ContactMe({ socialLinks }) {
         </div>
       </div>
 
-      {/* Pop-up Form */}
       <AnimatePresence>
         {isFormOpen && (
           <motion.div
@@ -75,7 +73,7 @@ export default function ContactMe({ socialLinks }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-4"
-            onClick={closeForm} // Menutup form jika klik di luar area form
+            onClick={closeForm}
           >
             <motion.div
               initial={{ scale: 0.7, opacity: 0 }}
@@ -83,7 +81,7 @@ export default function ContactMe({ socialLinks }) {
               exit={{ scale: 0.7, opacity: 0 }}
               transition={{ type: "spring", stiffness: 300, damping: 25 }}
               className="bg-neutral-800 p-6 md:p-8 rounded-xl shadow-2xl w-full max-w-md relative text-violet-100"
-              onClick={(e) => e.stopPropagation()} // Mencegah penutupan form saat klik di dalam form
+              onClick={(e) => e.stopPropagation()}
             >
               <button
                 onClick={closeForm}
@@ -95,7 +93,6 @@ export default function ContactMe({ socialLinks }) {
               <h3 className="text-2xl font-semibold mb-6 text-center text-violet-300">
                 {t('contactMe.form.title')}
               </h3>
-              {/* Ganti action URL dengan endpoint Formcarry Anda */}
               <form action="https://formcarry.com/s/9kPHCBPmbKF" method="POST" encType="multipart/form-data" onSubmit={handleFormSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                   <div>

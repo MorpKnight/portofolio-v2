@@ -13,9 +13,9 @@ export default function Navbar() {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-    setIsLangDropdownOpen(false); 
+    setIsLangDropdownOpen(false);
   };
-  
+
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   const toggleLangDropdown = () => {
@@ -24,8 +24,8 @@ export default function Navbar() {
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
-    setIsLangDropdownOpen(false); 
-    closeMobileMenu(); 
+    setIsLangDropdownOpen(false);
+    closeMobileMenu();
   };
 
   useEffect(() => {
@@ -76,19 +76,28 @@ export default function Navbar() {
     }
   };
 
+  const siteNameClassName = `
+    font-bold color-shift transition-colors
+    text-lg sm:text-xl md:text-xl lg:text-2xl
+    md:flex-shrink-0
+    whitespace-nowrap
+    truncate
+    max-w-full sm:max-w-xs md:max-w-sm lg:max-w-md
+  `;
+
   return (
     <nav className="bg-neutral-800/80 backdrop-blur-md shadow-lg fixed w-full z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <RouterLink
             to="/"
-            className="text-2xl font-bold color-shift transition-colors"
+            className={siteNameClassName.trim()}
             onClick={closeMobileMenu}
           >
             {t('siteName')}
           </RouterLink>
 
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden lg:flex items-center space-x-1">
             {navLinksData.map((link) => (
               <NavLink
                 key={link.textKey}
@@ -133,7 +142,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="md:hidden flex items-center">
+          <div className="lg:hidden flex items-center">
             <button
               onClick={() => changeLanguage(i18n.language === 'en' ? 'ja' : 'en')}
               className="text-violet-200 hover:text-violet-400 p-2 focus:outline-none flex items-center rounded-md hover:bg-neutral-700 transition-colors mr-1"
@@ -166,8 +175,8 @@ export default function Navbar() {
             animate="visible"
             exit="hidden"
             variants={menuVariants}
-            className="md:hidden bg-neutral-800/95 backdrop-blur-sm absolute w-full shadow-lg left-0"
-            style={{ top: '4rem' }}
+            className="lg:hidden bg-neutral-800/95 backdrop-blur-sm absolute w-full shadow-lg left-0"
+            style={{ top: '4rem' }} 
           >
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {navLinksData.map((link) => (

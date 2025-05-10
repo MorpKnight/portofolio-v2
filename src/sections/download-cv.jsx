@@ -18,22 +18,24 @@ export default function DownloadCV() {
           </p>
         </div>
         <div className="text-center">
-          <a
-            href="/Giovan_Sihombing.pdf" // Potential point to check
-            download
-            className="bg-violet-500 hover:bg-violet-600 text-white font-semibold px-8 py-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 text-lg inline-flex items-center"
-          >
-            <Download size={20} className="mr-2" />
-            {t('downloadCV.buttonText')}
-          </a>
-          <a
-            href="/Giovan_Portofolio.pdf"
-            download
-            className="bg-violet-500 hover:bg-violet-600 text-white font-semibold px-8 py-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 text-lg inline-flex items-center ml-4"
-          >
-            <Download size={20} className="mr-2" />
-            {t('downloadCV.portofolioButtonText')}
-          </a>
+          <div className="flex flex-col md:flex-row justify-center items-center">
+            <a
+              href="/Giovan_Sihombing.pdf" // Potential point to check
+              download
+              className="bg-violet-500 hover:bg-violet-600 text-white font-semibold px-8 py-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 text-lg inline-flex items-center"
+            >
+              <Download size={20} className="mr-2" />
+              {t('downloadCV.buttonText')}
+            </a>
+            <a
+              href="/Giovan_Portofolio.pdf"
+              download
+              className="bg-violet-500 hover:bg-violet-600 text-white font-semibold px-8 py-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 text-lg inline-flex items-center mt-4 md:mt-0 md:ml-4"
+            >
+              <Download size={20} className="mr-2" />
+              {t('downloadCV.portofolioButtonText')}
+            </a>
+          </div>
           <p className="text-violet-300 text-sm mt-4">
             {t('downloadCV.fileNameNote')}
           </p>
