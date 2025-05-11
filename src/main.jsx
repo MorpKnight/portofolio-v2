@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AppLayout from './App.jsx';
 import HomePage from './pages/home-page.jsx';
 import AllProjectsPage from './pages/all-projects-page.jsx';
+import ProjectDetailPage from './pages/project-detail-page.jsx';
 import LoadingSpinner from './components/loading-spinner.jsx';
 import ScrollToTop from './components/scroll-to-top.jsx';
 
@@ -20,7 +21,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Routes>
           <Route path="/" element={<AppLayout />}>
             <Route index element={<HomePage />} />
-            <Route path="all-projects" element={<AllProjectsPage />} />
+            <Route path="projects" element={<AllProjectsPage />} />
+            <Route path="projects/:projectId" element={<ProjectDetailPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

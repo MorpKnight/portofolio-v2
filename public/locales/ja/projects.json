@@ -1,0 +1,166 @@
+{
+  "featuredProjects": {
+    "title": "注目プロジェクト",
+    "description": "私が誇りに思うプロジェクトの一部です。",
+    "noProjects": "表示する注目プロジェクトはありません。",
+    "viewAll": "全プロジェクトを見る"
+  },
+  "allProjectsPage": {
+    "title": "私の全プロジェクト",
+    "description": "私が手がけたプロジェクトのコレクションです。どうぞご覧ください！",
+    "noProjects": "現在表示するプロジェクトはありません。",
+    "backToHome": "← ホームに戻る",
+    "imageNotFound": "画像が見つかりません",
+    "liveLink": "ライブデモ",
+    "repoLink": "GitHub",
+    "myRoleLabel": "私の役割",
+    "workByLabel": "作業タイプ"
+  },
+  "projectDetailPage": {
+    "descriptionLabel": "説明",
+    "projectInfoLabel": "プロジェクト情報",
+    "myRoleLabel": "私の役割",
+    "workByLabel": "作業タイプ",
+    "technologiesUsedLabel": "使用技術",
+    "projectLinksLabel": "プロジェクトリンク",
+    "implementationLabel": "実装詳細",
+    "projectNotFoundTitle": "プロジェクトが見つかりません",
+    "projectNotFoundDescription": "お探しのプロジェクトが存在しないか、IDが間違っています。URLを確認するか、全プロジェクト一覧に戻ってください。",
+    "backToAllProjects": "← 全プロジェクトに戻る"
+  },
+  "projectsData": [
+    {
+      "id": "eVoting Pemira FTUI2024",
+      "title": "PEMIRA FTUI 2024 eVotingアプリケーション",
+      "description": "ソフトウェアチームを率い、Node.js、Express.js、PostgreSQLを使用して、安全で効率的な電子投票システムの堅牢なバックエンド機能を開発。キャッシングにRedis、認証にJWT、ロギングにWinstonを統合し、DockerとDocker Composeを使用して展開。2,700人以上の有権者にサービスを提供。",
+      "tags": ["Express.js", "Backend", "JavaScript", "PostgreSQL", "Docker"],
+      "liveLink": null,
+      "repoLink": null,
+      "images": ["./images/pemira/1.jpeg", "./images/pemira/2.jpeg"],
+      "myRole": "Backend Team Lead",
+      "workBy": "グループプロジェクト",
+      "implementation": ["ソフトウェアチームを率い、Node.js、Express.js、PostgreSQLを使用して、安全で効率的な電子投票システムの堅牢なバックエンド機能を開発。", "キャッシングにRedis、認証にJWT、ロギングにWinstonを統合し、DockerとDocker Composeを使用して展開。", "選挙期間中、2,700人以上の有権者にサービスを提供。"]
+    },
+    {
+      "id": "ecoShopper",
+      "title": "EcoShopper (エコショッパー)",
+      "description": "環境に優しい代替品を提案することで持続可能な消費を促進するウェブアプリケーションを開発。製品の環境負荷を評価する動的データベースと推薦アルゴリズム開発を主導。SDGs 12、13、15をサポート。",
+      "tags": ["Frontend", "Backend", "JavaScript", "MongoDB", "Express.js", "React", "Docker"],
+      "liveLink": null,
+      "repoLink": null,
+      "repoLinkFE": "https://github.com/PhoebeIvana/RPL_frontend",
+      "repoLinkBE": "https://github.com/MorpKnight/EcoShopper-BE",
+      "images": ["./images/ecoshopper/1.jpeg", "./images/ecoshopper/2.jpeg", "./images/ecoshopper/3.jpeg", "./images/ecoshopper/4.jpeg", "./images/ecoshopper/5.jpeg", "./images/ecoshopper/6.jpeg"],
+      "myRole": "Fullstack Developer",
+      "workBy": "グループプロジェクト",
+      "implementation": ["Reactを使用してフロントエンドコンポーネントを開発し、Tailwind CSSでスタイルを設定。", "Express.jsとMongoDBを使用してデータ管理用のRESTful APIを構築。", "製品の環境影響スコアに基づいて推薦アルゴリズムを実装。"]
+    },
+    {
+      "id": "riscvCPU16bit",
+      "title": "RISCV CPU 16ビット (FPGA)",
+      "description": "VHDLを使用してFPGAベースのCPUを設計・シミュレーション。ALU、レジスタファイル、デコーダなどのコンポーネントを実装。シミュレーションと合成にModelSimとXilinx Vivadoを利用。",
+      "tags": ["VHDL", "FPGA"],
+      "liveLink": null,
+      "repoLink": "https://github.com/Digilab-UI/case-study-modul-9",
+      "images": ["./images/riscv/1.png", "./images/riscv/2.png"],
+      "myRole": "FPGA Designer",
+      "workBy": "個人プロジェクト",
+      "implementation": ["VHDLを使用してALU、レジスタファイル、制御ユニットなどの個々のCPUコンポーネントを設計・シミュレーション。", "コンポーネントを16ビットRISC-V CPUアーキテクチャに統合。", "機能シミュレーションにModelSim、FPGAボードへの合成にXilinx Vivadoを利用。"]
+    },
+    {
+      "id": "karsaBuanaLab",
+      "title": "KarsaBuana Lab バックエンド開発",
+      "description": "バックエンド開発を担当し、データ処理インフラストラクチャを設計・実装。堅牢なデータインタラクションのためのAPIを開発し、バックエンドのスケーラビリティを確保。",
+      "tags": ["Express.js", "Backend", "MongoDB", "Docker"],
+      "liveLink": null,
+      "repoLink": null,
+      "repoLinkFE": "https://github.com/ExerciseFTUI/KarsaBuanaLab-FE",
+      "repoLinkBE": "https://github.com/ExerciseFTUI/KarsaBuanaLab-BE",
+      "images": ["./images/karsa/1.png", "./images/karsa/2.png", "./images/karsa/3.png", "./images/karsa/4.png", "./images/karsa/5.png", "./images/karsa/6.png", "./images/karsa/7.png"],
+      "myRole": "Backend Developer",
+      "workBy": "グループプロジェクト",
+      "implementation": ["データ処理とハンドリングのためのRESTful APIを設計・実装。", "MongoDBを使用してデータベーススキーマとインタラクションを管理。", "Dockerコンテナ化によりバックエンドのスケーラビリティと信頼性を確保。"]
+    },
+    {
+      "id": "1xBidplatform",
+      "title": "1xBid 入札プラットフォーム",
+      "description": "リアルタイム入札プラットフォームのバックエンドアーキテクチャとフロントエンド開発に貢献。ユーザー認証、リアルタイムデータ処理、安全なトランザクション処理などの重要機能を統合。",
+      "tags": ["Backend", "Frontend", "JavaScript", "Express.js", "React", "PostgreSQL", "Docker"],
+      "liveLink": null,
+      "repoLink": "https://github.com/MorpKnight/1xBid",
+      "images": ["./images/1xbid/1.png", "./images/1xbid/2.png", "./images/1xbid/3.png", "./images/1xbid/4.png", "./images/1xbid/5.png", "./images/1xbid/6.png", "./images/1xbid/7.png"],
+      "myRole": "Fullstack Developer",
+      "workBy": "グループプロジェクト",
+      "implementation": ["Express.jsとPostgreSQLを使用したバックエンドAPI開発に貢献。", "リアルタイム入札表示のためにReactを使用してフロントエンドUIコンポーネントを開発。", "ユーザー認証と安全なトランザクション処理メカニズムを統合。"]
+    },
+    {
+      "id": "portfolioWebsite",
+      "title": "個人ポートフォリオサイト",
+      "description": "職務経歴、スキル、経験、プロジェクトを紹介するレスポンシブなポートフォリオサイトを設計・開発。React、Tailwind CSS、Framer Motionを使用し、多言語対応のためにi18nextを導入。",
+      "tags": ["React", "Frontend", "JavaScript", "React", "Docker"],
+      "liveLink": "https://giovanchristoffel.live/",
+      "repoLink": "https://github.com/MorpKnight/PortfolioV2-Public",
+      "myRole": "Frontend Developer",
+      "workBy": "個人プロジェクト",
+      "implementation": ["React、Tailwind CSS（スタイリング用）、Framer Motion（アニメーション用）で構築。", "多言語対応（英語と日本語）のためにi18nextを実装。", "様々な画面サイズに対応するレスポンシブレイアウトを設計し、Dockerを使用して展開。"]
+    },
+    {
+      "id": "mightyShield",
+      "title": "MightyShield - JSセキュリティライブラリ",
+      "description": "SQLインジェクション防止、XSS攻撃対策、ミドルウェアとしてのIPブラックリスト/ホワイトリスト管理など、重要なサイバーセキュリティ機能を提供するJavaScript (Node.js) ライブラリを作成。",
+      "tags": ["Backend", "JavaScript"],
+      "liveLink": null,
+      "repoLink": "https://github.com/ExerciseFTUI/MightyShield",
+      "images": ["./images/mightyshield/1.png", "./images/mightyshield/2.png"],
+      "myRole": "Backend Developer",
+      "workBy": "グループプロジェクト",
+      "implementation": ["SQLインジェクション防止とXSS攻撃対策のためのミドルウェアを開発。", "IPブラックリスト/ホワイトリスト管理機能を実装。", "Node.jsプロジェクトへの簡単な統合のためにNPMライブラリとしてパッケージ化。"]
+    },
+    {
+      "id": "imageColorScalerFPGA",
+      "title": "Image-ColorScaler (VHDL/FPGA)",
+      "description": "VHDLを使用してFPGA上にImage-ColorScalerシステムを開発し、カラー画像をグレースケールや他のカラースケール（グリーンスケール、レッドスケール、ブルースケール）に変換して画像処理を簡素化。",
+      "tags": ["VHDL", "FPGA"],
+      "liveLink": null,
+      "repoLink": "https://github.com/MorpKnight/Image-ColorScaler",
+      "myRole": "FPGA Designer",
+      "workBy": "グループプロジェクト",
+      "implementation": ["RGB画像データをグレースケール、グリーンスケール、レッドスケール、ブルースケールに変換するためのVHDLモジュールを開発。", "FPGA上でカラースケーリングロジックをシミュレーションおよびテスト。", "さらなる処理タスクのために画像データを簡素化することを目的とした。"]
+    },
+    {
+      "id": "jBusApp",
+      "title": "JBus バス予約シミュレーションアプリ",
+      "description": "OOPコースの最終プロジェクトとして、バス予約をシミュレートするJBusアプリケーションのバックエンドとフロントエンドを作成。",
+      "tags": ["Backend", "Frontend", "Mobile", "Java", "Spring Boot", "Android", "XML"],
+      "liveLink": null,
+      "repoLink": null,
+      "repoLinkFE": "https://github.com/MorpKnight/JBus-android",
+      "repoLinkBE": "https://github.com/MorpKnight/JBus",
+      "myRole": "Fullstack Developer",
+      "workBy": "グループプロジェクト",
+      "implementation": ["Java Spring Bootを使用してバスのスケジュール管理と予約のためのバックエンドサービスを開発。", "ユーザーインタラクションと予約シミュレーションのためのAndroidモバイルアプリケーションを作成。", "開発全体を通してオブジェクト指向プログラミングの原則に注力。"]
+    },
+    {
+      "id": "discordBot",
+      "title": "Discord ボット - Python",
+      "description": "個人のDiscordサーバーの整理を助けるためにPythonを使用してDiscordボットを作成。",
+      "tags": ["Backend", "Python"],
+      "liveLink": null,
+      "repoLink": "https://github.com/MorpKnight/discord-bot",
+      "myRole": "Backend Developer",
+      "workBy": "個人プロジェクト",
+      "implementation": ["Discord APIと連携するためにdiscord.pyライブラリを使用。", "サーバー整理とユーティリティ機能のためのコマンドを実装。", "個人のDiscordサーバー管理のためにボットをホスト・実行。"]
+    },
+    {
+      "id": "bluetoothAppsSmartwatch",
+      "title": "Bluetooth Apps スマートウォッチ (UIデザイン)",
+      "description": "高齢者の医療記録を監視・管理するために設計されたスマートウォッチアプリケーションのユーザーインターフェース（UI）を設計・実装し、使いやすさを確保。",
+      "tags": ["Mobile", "Android", "UI/UX", "XML"],
+      "liveLink": null,
+      "repoLink": "https://github.com/ivanpahlevi8/BluetoothApps",
+      "myRole": "UI/UX Designer",
+      "workBy": "グループプロジェクト",
+      "implementation": ["高齢者の使いやすさに焦点を当てたユーザーインターフェースのモックアップとプロトタイプを設計。", "Androidスマートウォッチアプリケーション用にXMLを使用してUIレイアウトを実装。", "医療記録監視のためのBluetooth機能とのUI統合に協力。"]
+    }
+  ]
+}

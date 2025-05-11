@@ -20,7 +20,7 @@ export default function DownloadCV() {
         <div className="text-center">
           <div className="flex flex-col md:flex-row justify-center items-center">
             <a
-              href="/Giovan_Sihombing.pdf" // Potential point to check
+              href="/Giovan_Sihombing.pdf"
               download
               className="bg-violet-500 hover:bg-violet-600 text-white font-semibold px-8 py-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 text-lg inline-flex items-center"
             >

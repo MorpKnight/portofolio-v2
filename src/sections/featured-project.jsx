@@ -10,8 +10,8 @@ import "slick-carousel/slick/slick-theme.css";
 import "../App.css";
 
 export default function Projects() {
-  const { t } = useTranslation();
-  const allProjectsData = t('projectsData', { returnObjects: true }) || [];
+  const { t } = useTranslation(['projects', 'translation']); // Ensure 'projects' namespace is loaded
+  const allProjectsData = t('projects:projectsData', { returnObjects: true }) || [];
   const featuredProjectsData = allProjectsData.slice(0, 4);
 
   const slickSettings = {
@@ -35,10 +35,10 @@ export default function Projects() {
         <div className="text-center mb-12">
           <Briefcase className="mx-auto text-violet-400 mb-4" size={48} />
           <h2 className="text-3xl font-bold mb-4 color-shift text-white drop-shadow-md">
-            {t('featuredProjects.title')}
+            {t('projects:featuredProjects.title')}
           </h2>
           <p className="text-violet-100 max-w-xl mx-auto drop-shadow-sm">
-            {t('featuredProjects.description')}
+            {t('projects:featuredProjects.description')}
           </p>
         </div>
 
@@ -58,7 +58,7 @@ export default function Projects() {
                         className="w-full h-48 sm:h-56 md:h-64 object-cover"
                         onError={(e) => {
                           e.target.onerror = null;
-                          e.target.src = `https://placehold.co/600x400/2A2A2A/C4B5FD?text=${encodeURIComponent(t('allProjectsPage.imageNotFound'))}`;
+                          e.target.src = `https://placehold.co/600x400/2A2A2A/C4B5FD?text=${encodeURIComponent(t('projects:allProjectsPage.imageNotFound'))}`;
                         }}
                       />
                       <div className="p-4 md:p-6 flex flex-col flex-grow">
@@ -126,17 +126,17 @@ export default function Projects() {
               })}
             </Slider>
           ) : (
-            <p className="text-center text-violet-300">{t('featuredProjects.noProjects')}</p>
+            <p className="text-center text-violet-300">{t('projects:featuredProjects.noProjects')}</p>
           )}
         </div>
 
         {featuredProjectsData.length > 0 && (
           <div className="text-center mt-12">
             <Link
-              to="/all-projects"
+              to="/projects"
               className="bg-violet-500 hover:bg-violet-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition-transform transform hover:scale-105"
             >
-              {t('featuredProjects.viewAll')}
+              {t('projects:featuredProjects.viewAll')}
             </Link>
           </div>
         )}
