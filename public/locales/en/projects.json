@@ -65,7 +65,28 @@
       "images": ["./images/riscv/1.png", "./images/riscv/2.png"],
       "myRole": "FPGA Designer",
       "workBy": "Solo Project",
-      "implementation": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."]
+      "implementation": [
+        {
+          "content": [
+            { "type": "text", "value": "Designed and simulated individual CPU components like ALU, register file, and control unit using VHDL." }
+          ]
+        },
+        {
+          "content": [
+            { "type": "text", "value": "Integrated components into a 16-bit RISC-V CPU architecture." }
+          ]
+        },
+        {
+          "content": [
+            { "type": "text", "value": "Utilized " },
+            { "type": "link", "href": "https://www.intel.com/content/www/us/en/software/programmable/quartus-prime/model-sim.html", "label": "ModelSim" },
+            { "type": "text", "value": " for functional simulation and " },
+            { "type": "link", "href": "https://www.xilinx.com/products/design-tools/vivado.html", "label": "Xilinx Vivado" },
+            { "type": "text", "value": " for synthesis onto an FPGA board." }
+          ],
+          "style": { "fontStyle": "italic" }
+        }
+      ]
     },
     {
       "id": "karsaBuanaLab",
@@ -79,7 +100,27 @@
       "images": ["./images/karsa/1.png", "./images/karsa/2.png", "./images/karsa/3.png", "./images/karsa/4.png", "./images/karsa/5.png", "./images/karsa/6.png", "./images/karsa/7.png"],
       "myRole": "Backend Developer",
       "workBy": "Group Project",
-      "implementation": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."]
+      "implementation": [
+        {
+          "content": [
+            { "type": "text", "value": "Designed and implemented RESTful APIs for data processing and handling." }
+          ]
+        },
+        {
+          "content": [
+            { "type": "text", "value": "Managed database schemas and interactions using " },
+            { "type": "link", "href": "https://www.mongodb.com/", "label": "MongoDB" },
+            { "type": "text", "value": "." }
+          ]
+        },
+        {
+          "content": [
+            { "type": "text", "value": "Ensured backend scalability and reliability through " },
+            { "type": "link", "href": "https://www.docker.com/", "label": "Docker" },
+            { "type": "text", "value": " containerization." }
+          ]
+        }
+      ]
     },
     {
       "id": "1xBidPlatform",
@@ -91,7 +132,29 @@
       "images": ["./images/1xbid/1.png", "./images/1xbid/2.png", "./images/1xbid/3.png", "./images/1xbid/4.png", "./images/1xbid/5.png", "./images/1xbid/6.png", "./images/1xbid/7.png"],
       "myRole": "Fullstack Developer",
       "workBy": "Group Project",
-      "implementation": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."]
+      "implementation": [
+        {
+          "content": [
+            { "type": "text", "value": "Contributed to backend API development using " },
+            { "type": "link", "href": "https://expressjs.com/", "label": "Express.js" },
+            { "type": "text", "value": " and " },
+            { "type": "link", "href": "https://www.postgresql.org/", "label": "PostgreSQL" },
+            { "type": "text", "value": "." }
+          ]
+        },
+        {
+          "content": [
+            { "type": "text", "value": "Developed frontend UI components with " },
+            { "type": "link", "href": "https://react.dev/", "label": "React" },
+            { "type": "text", "value": " for real-time bid display." }
+          ]
+        },
+        {
+          "content": [
+            { "type": "text", "value": "Integrated user authentication and secure transaction processing mechanisms." }
+          ]
+        }
+      ]
     },
     {
       "id": "portfolioWebsite",

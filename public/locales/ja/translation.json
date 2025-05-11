@@ -171,7 +171,7 @@
   },
   "footer": {
     "copyright": "© {{year}} {{siteName}}. 無断複写・転載を禁じます。",
-    "builtWith": "React と Tailwind CSS で構築。 [ホスティングプロバイダー名, 例: Vercel, Netlify, GitHub Pages] で展開。",
+    "builtWith": "React と Tailwind CSS で構築。 Vercel で展開。",
     "social": {
       "github": "GitHub",
       "linkedin": "LinkedIn",

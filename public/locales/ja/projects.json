@@ -65,7 +65,27 @@
       "images": ["./images/riscv/1.png", "./images/riscv/2.png"],
       "myRole": "FPGA Designer",
       "workBy": "個人プロジェクト",
-      "implementation": ["VHDLを使用してALU、レジスタファイル、制御ユニットなどの個々のCPUコンポーネントを設計・シミュレーション。", "コンポーネントを16ビットRISC-V CPUアーキテクチャに統合。", "機能シミュレーションにModelSim、FPGAボードへの合成にXilinx Vivadoを利用。"]
+      "implementation": [
+        {
+          "content": [
+            { "type": "text", "value": "VHDLを使用してALU、レジスタファイル、制御ユニットなどの個々のCPUコンポーネントを設計・シミュレーション。" }
+          ]
+        },
+        {
+          "content": [
+            { "type": "text", "value": "コンポーネントを16ビットRISC-V CPUアーキテクチャに統合。" }
+          ]
+        },
+        {
+          "content": [
+            { "type": "text", "value": "機能シミュレーションに" },
+            { "type": "link", "href": "https://www.intel.com/content/www/us/en/software/programmable/quartus-prime/model-sim.html", "label": "ModelSim" },
+            { "type": "text", "value": "、FPGAボードへの合成に" },
+            { "type": "link", "href": "https://www.xilinx.com/products/design-tools/vivado.html", "label": "Xilinx Vivado" },
+            { "type": "text", "value": "を利用。" }
+          ]
+        }
+      ]
     },
     {
       "id": "karsaBuanaLab",
@@ -79,7 +99,25 @@
       "images": ["./images/karsa/1.png", "./images/karsa/2.png", "./images/karsa/3.png", "./images/karsa/4.png", "./images/karsa/5.png", "./images/karsa/6.png", "./images/karsa/7.png"],
       "myRole": "Backend Developer",
       "workBy": "グループプロジェクト",
-      "implementation": ["データ処理とハンドリングのためのRESTful APIを設計・実装。", "MongoDBを使用してデータベーススキーマとインタラクションを管理。", "Dockerコンテナ化によりバックエンドのスケーラビリティと信頼性を確保。"]
+      "implementation": [
+        {
+          "content": [
+            { "type": "text", "value": "データ処理とハンドリングのためのRESTful APIを設計・実装。" }
+          ]
+        },
+        {
+          "content": [
+            { "type": "link", "href": "https://www.mongodb.com/", "label": "MongoDB" },
+            { "type": "text", "value": "を使用してデータベーススキーマとインタラクションを管理。" }
+          ]
+        },
+        {
+          "content": [
+            { "type": "link", "href": "https://www.docker.com/", "label": "Docker" },
+            { "type": "text", "value": "コンテナ化によりバックエンドのスケーラビリティと信頼性を確保。" }
+          ]
+        }
+      ]
     },
     {
       "id": "1xBidplatform",
@@ -91,7 +129,28 @@
       "images": ["./images/1xbid/1.png", "./images/1xbid/2.png", "./images/1xbid/3.png", "./images/1xbid/4.png", "./images/1xbid/5.png", "./images/1xbid/6.png", "./images/1xbid/7.png"],
       "myRole": "Fullstack Developer",
       "workBy": "グループプロジェクト",
-      "implementation": ["Express.jsとPostgreSQLを使用したバックエンドAPI開発に貢献。", "リアルタイム入札表示のためにReactを使用してフロントエンドUIコンポーネントを開発。", "ユーザー認証と安全なトランザクション処理メカニズムを統合。"]
+      "implementation": [
+        {
+          "content": [
+            { "type": "link", "href": "https://expressjs.com/", "label": "Express.js" },
+            { "type": "text", "value": "と" },
+            { "type": "link", "href": "https://www.postgresql.org/", "label": "PostgreSQL" },
+            { "type": "text", "value": "を使用したバックエンドAPI開発に貢献。" }
+          ]
+        },
+        {
+          "content": [
+            { "type": "text", "value": "リアルタイム入札表示のために" },
+            { "type": "link", "href": "https://react.dev/", "label": "React" },
+            { "type": "text", "value": "を使用してフロントエンドUIコンポーネントを開発。" }
+          ]
+        },
+        {
+          "content": [
+            { "type": "text", "value": "ユーザー認証と安全なトランザクション処理メカニズムを統合。" }
+          ]
+        }
+      ]
     },
     {
       "id": "portfolioWebsite",

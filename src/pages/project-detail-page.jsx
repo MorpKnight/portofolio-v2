@@ -128,9 +128,43 @@ export default function ProjectDetailPage() {
                   {t('projects:projectDetailPage.implementationLabel', 'Implementation Details')}
                 </h2>
                 <ul className="list-disc list-outside pl-5 space-y-2 text-violet-300 leading-relaxed">
-                  {project.implementation.map((item, index) => (
-                    <li key={index}>{item}</li>
-                  ))}
+                  {project.implementation.map((item, index) => {
+                    // Handle old format (string) for backward compatibility
+                    if (typeof item === 'string') {
+                      return <li key={index}>{item}</li>;
+                    }
+
+                    // Handle new format (object with content array)
+                    if (typeof item === 'object' && item !== null && Array.isArray(item.content)) {
+                      return (
+                        <li key={index} style={item.style || {}}>
+                          {item.content.map((part, partIndex) => {
+                            if (part.type === 'text') {
+                              return <span key={partIndex} style={part.style || {}}>{part.value}</span>;
+                            }
+                            if (part.type === 'link') {
+                              return (
+                                <a
+                                  key={partIndex}
+                                  href={part.href}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-violet-400 hover:text-violet-300 underline"
+                                  style={part.style || {}}
+                                >
+                                  {part.label}
+                                </a>
+                              );
+                            }
+                            return null;
+                          })}
+                        </li>
+                      );
+                    }
+                    
+                    // Fallback for unexpected item structure
+                    return <li key={index}>Invalid item format</li>;
+                  })}
                 </ul>
               </div>
             )}
