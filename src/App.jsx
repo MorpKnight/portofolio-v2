@@ -6,6 +6,7 @@ import { Github, Linkedin, MessageCircleMore, Twitter } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import { AnimatePresence } from 'framer-motion';
 
 import "./App.css";
 
@@ -59,7 +60,9 @@ export default function AppLayout() {
       <SpeedInsights />
       <Navbar />
       <main className="flex-grow">
-         <Outlet context={{ socialLinks }} />
+        <AnimatePresence mode="wait">
+          <Outlet context={{ socialLinks }} />
+        </AnimatePresence>
       </main>
       <Footer socialLinks={socialLinks} />
     </div>

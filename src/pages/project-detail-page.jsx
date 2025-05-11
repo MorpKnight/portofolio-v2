@@ -42,10 +42,9 @@ export default function ProjectDetailPage() {
     );
   }
 
-  // Ensure image paths are correct if they are relative to the public folder
   const processImagePath = (imgPath) => {
     if (imgPath.startsWith('./images/')) {
-      return `/${imgPath.substring(2)}`; // Assumes images are in public/images/
+      return `/${imgPath.substring(2)}`;
     }
     return imgPath;
   };
@@ -129,12 +128,10 @@ export default function ProjectDetailPage() {
                 </h2>
                 <ul className="list-disc list-outside pl-5 space-y-2 text-violet-300 leading-relaxed">
                   {project.implementation.map((item, index) => {
-                    // Handle old format (string) for backward compatibility
                     if (typeof item === 'string') {
                       return <li key={index}>{item}</li>;
                     }
 
-                    // Handle new format (object with content array)
                     if (typeof item === 'object' && item !== null && Array.isArray(item.content)) {
                       return (
                         <li key={index} style={item.style || {}}>
@@ -162,7 +159,6 @@ export default function ProjectDetailPage() {
                       );
                     }
                     
-                    // Fallback for unexpected item structure
                     return <li key={index}>Invalid item format</li>;
                   })}
                 </ul>

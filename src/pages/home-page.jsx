@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLocation, useOutletContext } from 'react-router-dom';
 import { useTranslation, Trans } from 'react-i18next';
+import { motion } from 'framer-motion';
 
 import About from '../sections/about-me';
 import Education from '../sections/education';
@@ -8,6 +9,12 @@ import Experience from '../sections/employment-history';
 import Projects from '../sections/featured-project';
 import DownloadCV from '../sections/download-cv';
 import ContactMe from '../sections/contact-me';
+
+const pageMotionProps = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1, transition: { duration: 0.4 } },
+  exit: { opacity: 0, transition: { duration: 0.2 } },
+};
 
 export default function HomePage() {
   const { t } = useTranslation();
@@ -25,7 +32,13 @@ export default function HomePage() {
   }, [location.hash, location.pathname]);
 
   return (
-    <>
+    <motion.div
+      key={location.pathname}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={pageMotionProps}
+    >
       <header
         id="home"
         className="pt-32 pb-16 md:pt-48 md:pb-24 bg-gradient-to-br from-[#212121] to-neutral-900 flex items-center justify-center text-center relative"
@@ -64,6 +77,6 @@ export default function HomePage() {
       <Projects />
       <DownloadCV />
       <ContactMe socialLinks={socialLinks} />
-    </>
+    </motion.div>
   );
 }

@@ -1,14 +1,22 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ExternalLink, Github } from 'lucide-react';
 import Slider from "react-slick";
+import { motion } from 'framer-motion';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+const pageMotionProps = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1, transition: { duration: 0.4 } },
+  exit: { opacity: 0, transition: { duration: 0.2 } },
+};
+
 export default function AllProjectsPage() {
-  const { t } = useTranslation(['projects', 'translation']); // Ensure 'projects' namespace is loaded
+  const { t } = useTranslation(['projects', 'translation']);
   const allProjects = t('projects:projectsData', { returnObjects: true }) || [];
+  const location = useLocation();
 
   const [selectedFramework, setSelectedFramework] = useState('');
   const [selectedType, setSelectedType] = useState('');
@@ -51,7 +59,14 @@ export default function AllProjectsPage() {
   };
 
   return (
-    <div className="bg-[#212121] text-violet-200 font-sans min-h-screen pt-24 pb-16">
+    <motion.div
+      key={location.pathname}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={pageMotionProps}
+      className="bg-[#212121] text-violet-200 font-sans min-h-screen pt-24 pb-16"
+    >
       <div className="container mx-auto px-6">
         <div className="text-center mb-12 pt-8">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 text-white color-shift">
@@ -219,6 +234,6 @@ export default function AllProjectsPage() {
           </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
