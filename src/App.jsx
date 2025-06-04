@@ -42,11 +42,11 @@ export default function AppLayout() {
       icon: <Linkedin size={24} />,
       label: "LinkedIn",
     },
-    {
-      href: "https://x.com/mrpknght",
-      icon: <Twitter size={24} />,
-      label: "X (formerly Twitter)",
-    },
+    // {
+    //   href: "https://x.com/mrpknght",
+    //   icon: <Twitter size={24} />,
+    //   label: "X (formerly Twitter)",
+    // },
     {
       href: "https://wa.me/6281281083891",
       icon: <MessageCircleMore size={24} />,
