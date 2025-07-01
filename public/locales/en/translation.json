@@ -108,6 +108,17 @@
         ]
       },
       {
+        "company": "Faculty of Dentistry Universitas Indonesia",
+        "position": "Public Relation Intern (Web Developer)",
+        "period": "May 2025 - June 2025",
+        "location": "Depok, West Java",
+        "responsibilities": [
+          "Spearheaded the UI redesign of the FKG UI website, enhancing the overall user experience and modernizing its visual interface.",
+          "Managed the seamless migration of all website data from a legacy Content Management System (CMS) to a new, more efficient platform while ensuring data integrity.",
+          "Strengthened WordPress security by implementing a Web Application Firewall (WAF) and configuring Multi-Factor Authentication (MFA/2FA) to protect against external threats and prevent unauthorized access."
+        ]
+      },
+      {
         "company": "Wiradha UI (University of Indonesia Public Relations)",
         "position": "Web Developer (Internship)",
         "period": "July 2024 - January 2025 (6 months)",
@@ -132,16 +143,16 @@
         ]
       },
       {
-          "company": "EXERCISE FTUI",
-          "position": "Staff of Project Software",
-          "period": "February 2023 - January 2024 (1 year)",
-          "location": "Depok, West Java",
-          "responsibilities": [
-            "Instrumental in designing and developing software solutions for several ongoing projects.",
-            "Designed UI/UX for an IoT application to monitor the condition of the elderly.",
-            "Created a Node.js library to prevent SQL injection, XSS attacks, and manage IP blacklists/whitelists as middleware.",
-            "Acted as a Backend developer in digitizing the project flow from KarsaBuana Lab, using ExpressJS and MongoDB, and ensured API endpoints functioned correctly using Postman."
-          ]
+        "company": "EXERCISE FTUI",
+        "position": "Staff of Project Software",
+        "period": "February 2023 - January 2024 (1 year)",
+        "location": "Depok, West Java",
+        "responsibilities": [
+          "Instrumental in designing and developing software solutions for several ongoing projects.",
+          "Designed UI/UX for an IoT application to monitor the condition of the elderly.",
+          "Created a Node.js library to prevent SQL injection, XSS attacks, and manage IP blacklists/whitelists as middleware.",
+          "Acted as a Backend developer in digitizing the project flow from KarsaBuana Lab, using ExpressJS and MongoDB, and ensured API endpoints functioned correctly using Postman."
+        ]
       }
     ]
   },
@@ -177,5 +188,17 @@
       "linkedin": "LinkedIn",
       "twitter": "X (formerly Twitter)"
     }
+  },
+  "minecraftPage": {
+    "title": "My Minecraft Server",
+    "subtitle": "Join us for an adventure!",
+    "serverInfoTitle": "Server Information",
+    "versionLabel": "Minecraft Version",
+    "downloadMinecraftButton": "Download Minecraft (Official)",
+    "modpackInfoTitle": "Modpack Information",
+    "modpackDescription": "This server uses a custom modpack to enhance your gameplay experience. Download it below!",
+    "downloadModpackButton": "Download Modpack",
+    "howToJoinTitle": "How to Join",
+    "howToJoinInstructionsModpack": "Ensure you have the correct Minecraft version and install our modpack. Then, add our server to your multiplayer list."
   }
 }

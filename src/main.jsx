@@ -12,6 +12,7 @@ import './i18next.js';
 import './index.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import MinecraftServerPage from './pages/minecraft-server.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -23,6 +24,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route index element={<HomePage />} />
             <Route path="projects" element={<AllProjectsPage />} />
             <Route path="projects/:projectId" element={<ProjectDetailPage />} />
+            <Route path="minecraft" element={<MinecraftServerPage projectId="minecraft" />} />
           </Route>
         </Routes>
       </BrowserRouter>
