@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
+import ThemeSettings from './components/ThemeSettings'; // Import ThemeSettings
 import { Github, Linkedin, MessageCircleMore, Twitter } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Analytics } from '@vercel/analytics/react';
@@ -55,7 +56,7 @@ export default function AppLayout() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#212121] text-violet-200 font-sans flex flex-col">
+    <div className="min-h-screen bg-[color:var(--background)] text-[color:var(--text)] font-sans flex flex-col">
       <Analytics />
       <SpeedInsights />
       <Navbar />
@@ -65,6 +66,7 @@ export default function AppLayout() {
         </AnimatePresence>
       </main>
       <Footer socialLinks={socialLinks} />
+      <ThemeSettings /> {/* Add ThemeSettings component */}
     </div>
   );
 }

@@ -2,6 +2,8 @@ global:
   loading: "Loading..."
 
 siteName: "Giovan Christoffel Sihombing"
+siteNameShort: "Giovan C. Sihombing"
+siteNameMobile: "Giovan C. S."
 
 nav:
   about: "About"
@@ -69,7 +71,7 @@ aboutMe:
 
 education:
   title: "Education"
-  gpaLabel: "GPA: 3.61/4.00"
+  gpaLabel: "GPA: 3.64/4.00"
   achievementsTitle: "Key Achievements & Coursework:"
   entries:
     - institution: "University of Indonesia"

@@ -2,6 +2,8 @@ global:
   loading: "読み込み中..."
 
 siteName: "ジョバン・クリストフェル・シホンビン"
+siteNameShort: "ジョバン・C・シホンビン"
+siteNameMobile: "ジョバン・C. S."
 
 nav:
   about: "私について"
@@ -69,7 +71,7 @@ aboutMe:
 
 education:
   title: "学歴"
-  gpaLabel: "GPA: 3.61/4.00"
+  gpaLabel: "GPA: 3.64/4.00"
   achievementsTitle: "主な実績とコースワーク："
   entries:
     - institution: "インドネシア大学"

@@ -6,14 +6,14 @@ export default function DownloadCV() {
   const { t } = useTranslation();
 
   return (
-    <section id="cv" className="py-16 md:py-24 bg-neutral-900 relative z-10">
+    <section id="cv" className="py-16 md:py-24 bg-[color:var(--background-1)] relative z-10">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <FileText className="mx-auto text-violet-400 mb-4" size={48} />
-          <h2 className="text-3xl font-bold mb-4 text-white">
+          <FileText className="mx-auto text-[color:var(--primary)] mb-4" size={48} />
+          <h2 className="text-3xl font-bold mb-4 text-[color:var(--text)]">
             {t('downloadCV.title')}
           </h2>
-          <p className="text-violet-200 max-w-xl mx-auto">
+          <p className="text-[color:var(--text)] max-w-xl mx-auto">
             {t('downloadCV.description')}
           </p>
         </div>
@@ -22,7 +22,7 @@ export default function DownloadCV() {
             <a
               href="/Giovan_Sihombing.pdf"
               download
-              className="bg-violet-500 hover:bg-violet-600 text-white font-semibold px-8 py-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 text-lg inline-flex items-center"
+              className="bg-[color:var(--primary)] hover:bg-[color:var(--secondary)] text-white font-semibold px-8 py-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 text-lg inline-flex items-center"
             >
               <Download size={20} className="mr-2" />
               {t('downloadCV.buttonText')}
@@ -30,13 +30,13 @@ export default function DownloadCV() {
             <a
               href="/Giovan_Portofolio.pdf"
               download
-              className="bg-violet-500 hover:bg-violet-600 text-white font-semibold px-8 py-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 text-lg inline-flex items-center mt-4 md:mt-0 md:ml-4"
+              className="bg-[color:var(--primary)] hover:bg-[color:var(--secondary)] text-white font-semibold px-8 py-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 text-lg inline-flex items-center mt-4 md:mt-0 md:ml-4"
             >
               <Download size={20} className="mr-2" />
               {t('downloadCV.portofolioButtonText')}
             </a>
           </div>
-          <p className="text-violet-300 text-sm mt-4">
+          <p className="text-[color:var(--secondary)] text-sm mt-4">
             {t('downloadCV.fileNameNote')}
           </p>
         </div>

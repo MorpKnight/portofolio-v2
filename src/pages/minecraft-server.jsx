@@ -24,7 +24,7 @@ const MinecraftServerPage = () => {
   return (
     <div
       style={pageSpecificStyles}
-      className="bg-repeat min-h-screen pt-[100px] px-5 pb-10 text-white" // pt-[100px] untuk menghindari navbar, padding, dan warna teks dasar
+      className="bg-repeat min-h-screen pt-[100px] px-5 pb-10 text-[color:var(--text)]" // pt-[100px] untuk menghindari navbar, padding, dan warna teks dasar
     >
       <div className="container mx-auto">
         <header className="text-center mb-10">
@@ -42,7 +42,7 @@ const MinecraftServerPage = () => {
             href={minecraftDownloadLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-md shadow-md hover:shadow-lg transition duration-150 ease-in-out no-underline text-base my-2 mx-1"
+            className="inline-block bg-[color:var(--primary)] hover:bg-[color:var(--secondary)] text-white font-semibold py-2 px-4 rounded-md shadow-md hover:shadow-lg transition duration-150 ease-in-out no-underline text-base my-2 mx-1"
           >
             {t('minecraftPage.downloadMinecraftButton')}
           </a>
@@ -59,7 +59,7 @@ const MinecraftServerPage = () => {
               href={modpackDownloadLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-md shadow-md hover:shadow-lg transition duration-150 ease-in-out no-underline text-base my-2 mx-1"
+              className="inline-block bg-[color:var(--primary)] hover:bg-[color:var(--secondary)] text-white font-semibold py-2 px-4 rounded-md shadow-md hover:shadow-lg transition duration-150 ease-in-out no-underline text-base my-2 mx-1"
             >
               {t('minecraftPage.downloadModpackButton')}
             </a>

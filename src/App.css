@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .animated-gradient-bg {
-  background: linear-gradient(270deg, #a78bfa, #8b5cf6, #c4b5fd); /* Soft purple shades (e.g., violet-400, violet-500, violet-300) */
+  background: linear-gradient(270deg, var(--accent), var(--primary), var(--secondary)); /* Use theme variables */
   background-size: 600% 600%;
   animation: gradientAnimation 30s ease infinite;
 }
@@ -32,16 +32,16 @@
 
 /* New color-shifting animation for titles */
 .color-shift {
-  background: linear-gradient(270deg, #a78bfa, #8b5cf6, #c4b5fd, #ffffff);
+  background: linear-gradient(270deg, var(--primary), var(--secondary), var(--accent), var(--text));
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   animation: gradientAnimation 30s ease infinite;
 }
 
-/* Fallback black background for projects section */
+/* Fallback theme background for projects section */
 .featured-projects-bg {
-  background-color: #212121; /* Solid black background */
+  background-color: var(--background); /* Use theme background */
   position: absolute;
   top: 0;
   left: 0;
@@ -60,17 +60,17 @@
   border-radius: 10px;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #5b21b6; /* Or violet-600 */
+  background: var(--primary); /* Use theme primary color */
   border-radius: 10px;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #4c1d95; /* Or violet-700 */
+  background: var(--secondary); /* Use theme secondary color on hover */
 }
 
 /* Add this to your src/App.css */
 
 .dynamic-black-gradient-bg {
-  background: linear-gradient(270deg, #212121, #311b92, #1a237e, #4a148c); /* Black, Deep Purple, Indigo, Dark Purple */
+  background: linear-gradient(270deg, var(--background), var(--primary), var(--secondary), var(--accent)); /* Use theme variables */
   background-size: 800% 800%; /* Increased size for smoother/slower transition */
   animation: gradientAnimation 45s ease infinite; /* Adjusted timing */
 }

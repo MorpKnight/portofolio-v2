@@ -29,15 +29,15 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="py-16 md:py-24 relative bg-[#212121] text-violet-200">
+    <section id="projects" className="py-16 md:py-24 relative bg-[color:var(--background)] text-[color:var(--text)]">
       <div className="featured-projects-bg"></div>
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-12">
-          <Briefcase className="mx-auto text-violet-400 mb-4" size={48} />
-          <h2 className="text-3xl font-bold mb-4 color-shift text-white drop-shadow-md">
+          <Briefcase className="mx-auto text-[color:var(--primary)] mb-4" size={48} />
+          <h2 className="text-3xl font-bold mb-4 color-shift text-[color:var(--text)] drop-shadow-md">
             {t('projects:featuredProjects.title')}
           </h2>
-          <p className="text-violet-100 max-w-xl mx-auto drop-shadow-sm">
+          <p className="text-[color:var(--text)] max-w-xl mx-auto drop-shadow-sm">
             {t('projects:featuredProjects.description')}
           </p>
         </div>
@@ -51,7 +51,7 @@ export default function Projects() {
                   : project.imageUrl || `https://placehold.co/600x400/4c1d95/ddd6fe?text=${encodeURIComponent(project.title)}`;
                 return (
                   <div key={project.id} className="outline-none focus:outline-none px-2">
-                    <div className="bg-neutral-800 rounded-lg shadow-xl overflow-hidden flex flex-col h-full max-h-[550px]">
+                    <div className="bg-[color:var(--card-bg)] rounded-lg shadow-xl overflow-hidden flex flex-col h-full max-h-[550px] border border-[color:var(--card-border)]">
                       <img
                         src={imageSrc}
                         alt={project.title}
@@ -62,16 +62,16 @@ export default function Projects() {
                         }}
                       />
                       <div className="p-4 md:p-6 flex flex-col flex-grow">
-                        <h3 className="text-xl md:text-2xl font-semibold mb-2 text-violet-400">
+                        <h3 className="text-xl md:text-2xl font-semibold mb-2 text-[color:var(--primary)]">
                           {project.title}
                         </h3>
-                        <p className="text-violet-300 mb-4 text-sm leading-relaxed h-20 sm:h-24 overflow-y-auto prose-sm prose-invert max-w-none custom-scrollbar flex-grow">
+                        <p className="text-[color:var(--text)] mb-4 text-sm leading-relaxed h-20 sm:h-24 overflow-y-auto prose-sm prose-invert max-w-none custom-scrollbar flex-grow">
                           {project.description}
                         </p>
                         {project.tags && project.tags.length > 0 && (
                           <div className="mb-4 flex flex-wrap gap-2">
                             {project.tags.map(tag => (
-                              <span key={tag} className="inline-block bg-neutral-700 text-violet-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">
+                              <span key={tag} className="inline-block bg-[color:var(--background-1)] text-[color:var(--secondary)] text-xs font-semibold px-2.5 py-0.5 rounded-full border border-[color:var(--card-border)]">
                                 {tag}
                               </span>
                             ))}
@@ -83,7 +83,7 @@ export default function Projects() {
                               href={project.liveLink}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-violet-500 hover:bg-violet-600 text-white font-semibold px-4 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105 inline-flex items-center"
+                              className="bg-[color:var(--primary)] hover:bg-[color:var(--secondary)] text-white font-semibold px-4 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105 inline-flex items-center"
                             >
                               Live Demo <ExternalLink size={16} className="ml-2" />
                             </a>
@@ -93,7 +93,7 @@ export default function Projects() {
                               href={project.repoLink}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-neutral-700 hover:bg-neutral-600 text-violet-300 font-semibold px-4 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105 inline-flex items-center"
+                              className="btn-theme-secondary font-semibold px-4 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105 inline-flex items-center"
                             >
                               GitHub <Github size={16} className="ml-2" />
                             </a>
@@ -103,7 +103,7 @@ export default function Projects() {
                               href={project.repoLinkFE}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-neutral-700 hover:bg-neutral-600 text-violet-300 font-semibold px-4 py-2 rounded-lg inline-flex items-center"
+                              className="btn-theme-secondary font-semibold px-4 py-2 rounded-lg inline-flex items-center"
                             >
                               GitHub FE <Github size={16} className="ml-2" />
                             </a>
@@ -113,7 +113,7 @@ export default function Projects() {
                               href={project.repoLinkBE}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-neutral-700 hover:bg-neutral-600 text-violet-300 font-semibold px-4 py-2 rounded-lg inline-flex items-center"
+                              className="btn-theme-secondary font-semibold px-4 py-2 rounded-lg inline-flex items-center"
                             >
                               GitHub BE <Github size={16} className="ml-2" />
                             </a>
@@ -126,7 +126,7 @@ export default function Projects() {
               })}
             </Slider>
           ) : (
-            <p className="text-center text-violet-300">{t('projects:featuredProjects.noProjects')}</p>
+            <p className="text-center text-[color:var(--secondary)]">{t('projects:featuredProjects.noProjects')}</p>
           )}
         </div>
 
@@ -134,7 +134,7 @@ export default function Projects() {
           <div className="text-center mt-12">
             <Link
               to="/projects"
-              className="bg-violet-500 hover:bg-violet-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition-transform transform hover:scale-105"
+              className="bg-[color:var(--primary)] hover:bg-[color:var(--secondary)] text-white font-semibold px-6 py-3 rounded-lg shadow-md transition-transform transform hover:scale-105"
             >
               {t('projects:featuredProjects.viewAll')}
             </Link>

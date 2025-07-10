@@ -1,74 +1,636 @@
 @import "tailwindcss";
 
+/* REVISED THEMES - v2 
+  Palettes updated for a more modern, vibrant, and trendy feel.
+  - Higher contrast for better readability.
+  - Saturated dark backgrounds instead of pure grays.
+  - Brighter, more engaging accent colors.
+*/
+
+/* --- DARK THEMES (REVISED) --- */
+
+/* THEME REVISION: 'dark-default' -> 'dark-slate' */
+:root[data-theme='dark-slate'] {
+  --background: #020617;      /* Deep Slate Blue */
+  --background-1: #0f172a;    /* Mid Slate Blue */
+  --background-2: #1e293b;    /* Light Slate Blue */
+  --text: #e2e8f0;            /* Soft White */
+  --text-muted: #94a3b8;      /* Muted Slate Text */
+  --primary: #7c3aed;         /* Vibrant Violet */
+  --secondary: #9d6cfc;       /* Lighter Violet */
+  --accent: #c4b5fd;          /* Lavender Accent */
+  --card-bg: #0f172a;
+  --card-border: #1e293b;
+  --shadow: rgba(0, 0, 0, 0.4);
+  --hover-bg: #1e293b;
+  --nav-bg: rgba(15, 23, 42, 0.85);
+  --nav-border: #1e293b;
+  --nav-hover: #1e293b;
+  --nav-text: #e2e8f0;
+  --nav-text-hover: #7c3aed;
+}
+
+/* THEME REVISION: 'dark-blue' -> 'dark-ocean' */
+:root[data-theme='dark-ocean'] {
+  --background: #0c2434;      /* Deep Ocean Blue */
+  --background-1: #0b3954;    /* Mid Ocean Blue */
+  --background-2: #084c61;    /* Lighter Ocean Blue */
+  --text: #e0fbfc;            /* Light Cyan Text */
+  --text-muted: #97d2fb;      /* Muted Sky Blue */
+  --primary: #0ea5e9;         /* Bright Sky Blue */
+  --secondary: #38bdf8;       /* Lighter Sky Blue */
+  --accent: #7dd3fc;          /* Soft Sky Blue Accent */
+  --card-bg: #0b3954;
+  --card-border: #084c61;
+  --shadow: rgba(0, 0, 0, 0.4);
+  --hover-bg: #084c61;
+  --nav-bg: rgba(11, 57, 84, 0.85);
+  --nav-border: #084c61;
+  --nav-hover: #084c61;
+  --nav-text: #e0fbfc;
+  --nav-text-hover: #0ea5e9;
+}
+
+/* THEME REVISION: 'dark-emerald' -> 'dark-forest' */
+:root[data-theme='dark-forest'] {
+  --background: #052e16;      /* Deep Forest Green */
+  --background-1: #14532d;    /* Mid Forest Green */
+  --background-2: #166534;    /* Light Forest Green */
+  --text: #dcfce7;            /* Soft Mint Text */
+  --text-muted: #86efac;      /* Muted Green Text */
+  --primary: #4ade80;         /* Vibrant Lime Green */
+  --secondary: #86efac;       /* Lighter Lime Green */
+  --accent: #bbf7d0;          /* Pale Mint Accent */
+  --card-bg: #14532d;
+  --card-border: #166534;
+  --shadow: rgba(0, 0, 0, 0.4);
+  --hover-bg: #166534;
+  --nav-bg: rgba(20, 83, 45, 0.85);
+  --nav-border: #166534;
+  --nav-hover: #166534;
+  --nav-text: #dcfce7;
+  --nav-text-hover: #4ade80;
+}
+
+/* THEME REVISION: 'dark-amber' -> 'dark-sunset' */
+:root[data-theme='dark-sunset'] {
+  --background: #211a1d;      /* Very Dark Warm Brown */
+  --background-1: #42202f;    /* Deep Red-Brown */
+  --background-2: #5f273b;    /* Lighter Red-Brown */
+  --text: #fce7f3;            /* Soft Pink-White */
+  --text-muted: #f9a8d4;      /* Muted Pink */
+  --primary: #f43f5e;         /* Vibrant Rose */
+  --secondary: #fb7185;       /* Lighter Rose */
+  --accent: #fda4af;          /* Soft Rose Accent */
+  --card-bg: #42202f;
+  --card-border: #5f273b;
+  --shadow: rgba(0, 0, 0, 0.4);
+  --hover-bg: #5f273b;
+  --nav-bg: rgba(66, 32, 47, 0.85);
+  --nav-border: #5f273b;
+  --nav-hover: #5f273b;
+  --nav-text: #fce7f3;
+  --nav-text-hover: #f43f5e;
+}
+
+
+/* --- LIGHT THEMES (REVISED) --- */
+
+/* THEME REVISION: 'light-default' -> 'light-stone' */
+:root[data-theme='light-stone'] {
+  --background: #f8fafc;      /* Very Light Cool Gray */
+  --background-1: #f1f5f9;    /* Light Cool Gray */
+  --background-2: #e2e8f0;    /* Muted Cool Gray */
+  --text: #020617;            /* Nearly Black */
+  --text-muted: #475569;      /* Slate Gray */
+  --primary: #2563eb;         /* Strong Blue */
+  --secondary: #3b82f6;       /* Lighter Blue */
+  --accent: #60a5fa;          /* Soft Blue */
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --shadow: rgba(100, 116, 139, 0.12);
+  --hover-bg: #f1f5f9;
+  --nav-bg: rgba(255, 255, 255, 0.8);
+  --nav-border: #e2e8f0;
+  --nav-hover: #f1f5f9;
+  --nav-text: #020617;
+  --nav-text-hover: #2563eb;
+}
+
+/* THEME REVISION: 'light-sky' -> 'light-daybreak' */
+:root[data-theme='light-daybreak'] {
+  --background: #f0f8ff;      /* Alice Blue */
+  --background-1: #e0f2fe;    /* Lighter Sky Blue */
+  --background-2: #bae6fd;    /* Light Sky Blue */
+  --text: #082f49;            /* Deep Blue Text */
+  --text-muted: #075985;      /* Mid Blue Text */
+  --primary: #0ea5e9;         /* Vibrant Sky Blue */
+  --secondary: #38bdf8;       /* Lighter Sky Blue */
+  --accent: #7dd3fc;          /* Soft Sky Blue */
+  --card-bg: #ffffff;
+  --card-border: #e0f2fe;
+  --shadow: rgba(14, 165, 233, 0.1);
+  --hover-bg: #e0f2fe;
+  --nav-bg: rgba(240, 248, 255, 0.8);
+  --nav-border: #e0f2fe;
+  --nav-hover: #e0f2fe;
+  --nav-text: #082f49;
+  --nav-text-hover: #0ea5e9;
+}
+
+/* THEME REVISION: 'light-rose' -> 'light-blossom' */
+:root[data-theme='light-blossom'] {
+  --background: #fff1f2;      /* Very Light Rose */
+  --background-1: #ffe4e6;    /* Light Rose */
+  --background-2: #fecdd3;    /* Muted Rose */
+  --text: #881337;            /* Deep Rose Text */
+  --text-muted: #be185d;      /* Mid Rose Text */
+  --primary: #e11d48;         /* Vibrant Pink/Rose */
+  --secondary: #f43f5e;       /* Lighter Pink/Rose */
+  --accent: #fb7185;          /* Soft Pink/Rose */
+  --card-bg: #ffffff;
+  --card-border: #fecdd3;
+  --shadow: rgba(225, 29, 72, 0.1);
+  --hover-bg: #ffe4e6;
+  --nav-bg: rgba(255, 241, 242, 0.8);
+  --nav-border: #fecdd3;
+  --nav-hover: #ffe4e6;
+  --nav-text: #881337;
+  --nav-text-hover: #e11d48;
+}
+
+/* THEME REVISION: 'light-green' -> 'light-meadow' */
+:root[data-theme='light-meadow'] {
+  --background: #f0fdf4;      /* Very Light Green */
+  --background-1: #dcfce7;    /* Light Green */
+  --background-2: #bbf7d0;    /* Muted Green */
+  --text: #14532d;            /* Deep Green Text */
+  --text-muted: #15803d;      /* Mid Green Text */
+  --primary: #22c55e;         /* Vibrant Green */
+  --secondary: #4ade80;       /* Lighter Green */
+  --accent: #86efac;          /* Soft Green */
+  --card-bg: #ffffff;
+  --card-border: #dcfce7;
+  --shadow: rgba(34, 197, 94, 0.1);
+  --hover-bg: #dcfce7;
+  --nav-bg: rgba(240, 253, 244, 0.8);
+  --nav-border: #dcfce7;
+  --nav-hover: #dcfce7;
+  --nav-text: #14532d;
+  --nav-text-hover: #22c55e;
+}
+
+
+/* --- BASE & UTILITY STYLES (Unchanged) --- */
+
 html {
   scroll-behavior: smooth;
 }
-/* 
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.5s, color 0.5s;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Custom utility classes for theme-aware styling */
+.bg-theme-primary {
+  background-color: var(--background);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+.bg-theme-secondary {
+  background-color: var(--background-1);
+}
+
+.bg-theme-tertiary {
+  background-color: var(--background-2);
+}
+
+.bg-theme-card {
+  background-color: var(--card-bg);
+}
+
+.border-theme-card {
+  border-color: var(--card-border);
+}
+
+.text-theme-primary {
+  color: var(--text);
+}
+
+.text-theme-muted {
+  color: var(--text-muted);
+}
+
+.text-theme-accent {
+  color: var(--primary);
+}
+
+/* Navbar utility classes */
+.bg-nav {
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.border-nav {
+  border-color: var(--nav-border);
+}
+
+.text-nav {
+  color: var(--nav-text);
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.text-nav-hover {
+  transition: color 0.3s ease;
+}
+
+.text-nav-hover:hover {
+  color: var(--nav-text-hover);
+}
+
+.bg-nav-hover {
+  transition: background-color 0.3s ease;
+}
+
+.bg-nav-hover:hover {
+  background-color: var(--nav-hover);
+}
+
+/* Enhanced navbar styling for better readability */
+nav.navbar-enhanced {
+  box-shadow: 0 1px 3px var(--shadow);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Navbar on scroll - subtle enhancement */
+nav.navbar-enhanced.scrolled {
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+/* Simple nav link styling */
+nav.navbar-enhanced .nav-link {
+  position: relative;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease;
+}
+
+/* Simple hover effect */
+nav.navbar-enhanced .nav-link:hover {
+  background-color: var(--nav-hover);
+  color: var(--nav-text-hover);
+}
+
+/* Simple underline for active state */
+nav.navbar-enhanced .nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+
+nav.navbar-enhanced .nav-link:hover::before,
+nav.navbar-enhanced .nav-link.active::before {
+  transform: scaleX(1);
+}
+
+/* Simple site name styling */
+.site-name-modern {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.site-name-modern:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive font sizes for site name */
+@media (max-width: 1279px) {
+  .site-name-modern {
+    font-size: 1.25rem;
   }
-  a:hover {
-    color: #747bff;
+}
+
+@media (max-width: 767px) {
+  .site-name-modern {
+    font-size: 1.125rem;
   }
-  button {
-    background-color: #f9f9f9;
+}
+
+@media (max-width: 479px) {
+  .site-name-modern {
+    font-size: 1rem;
   }
-} */
+}
+
+/* Simple language selector */
+.lang-selector-modern {
+  position: relative;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease;
+}
+
+.lang-selector-modern:hover {
+  border-color: var(--primary);
+  background-color: var(--hover-bg);
+}
+
+/* Simple dropdown - keep as is since it's already good */
+.dropdown-modern {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  box-shadow: 0 4px 12px var(--shadow);
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.dropdown-modern.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.dropdown-modern .dropdown-item {
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease;
+}
+
+.dropdown-modern .dropdown-item:hover {
+  background: var(--hover-bg);
+}
+
+/* Simple mobile menu styling */
+.mobile-menu-modern {
+  background: var(--nav-bg);
+  border: 1px solid var(--nav-border);
+  border-radius: 0 0 0.5rem 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.mobile-menu-modern .nav-link {
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  margin-bottom: 0.25rem;
+  transition: all 0.2s ease;
+}
+
+.mobile-menu-modern .nav-link:hover {
+  background: var(--hover-bg);
+}
+
+/* Simple scroll progress indicator */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  transform-origin: left;
+  z-index: 100;
+  transition: transform 0.1s ease;
+}
+
+/* Navbar focus states for accessibility */
+nav.navbar-enhanced .nav-link:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.lang-selector-modern:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Scroll to top button */
+.scroll-to-top-btn {
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-to-top-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-to-top-btn:active {
+  transform: translateY(0) scale(0.95);
+}
+
+/* Enhanced navbar micro-interactions */
+.navbar-enhanced .nav-link:focus-visible {
+  transform: scale(1.05);
+  box-shadow: 0 0 0 3px var(--primary);
+}
+
+/* Simple navbar indicator for active sections */
+.navbar-enhanced .nav-link.active::after {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 50%;
+}
+
+/* Enhanced mobile menu animations - removed slideDown */
+
+/* Breadcrumb navigation enhancement */
+.nav-breadcrumb {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.nav-breadcrumb:hover {
+  opacity: 1;
+}
+
+/* Enhanced search functionality if needed */
+.nav-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-search input {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  width: 200px;
+  transition: all 0.3s ease;
+  color: var(--text);
+}
+
+.nav-search input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.1);
+  width: 250px;
+}
+
+/* Theme toggle button enhancement */
+.theme-toggle-btn {
+  position: relative;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.1) rotate(180deg);
+  box-shadow: 0 4px 20px var(--shadow);
+}
+
+.theme-toggle-btn:active {
+  transform: scale(0.9) rotate(180deg);
+}
+
+/* Notification badge for navbar items */
+.nav-item-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background: var(--danger);
+  color: white;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.625rem;
+  font-weight: 600;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+
+/* Keyboard navigation enhancement */
+.navbar-enhanced .nav-link:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 0.375rem;
+}
+
+/* Skip to main content link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--primary);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Navbar loading state */
+.navbar-loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar-loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  animation: loading-shimmer 1.5s infinite;
+}
+
+@keyframes loading-shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Print styles */
+@media print {
+  .navbar-enhanced,
+  .scroll-to-top-btn,
+  .scroll-progress {
+    display: none !important;
+  }
+}
+
+/* Enhanced responsiveness */
+@media (max-width: 768px) {
+  .site-name-modern {
+    font-size: 1.25rem;
+  }
+  
+  nav.navbar-enhanced .nav-link {
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .lang-selector-modern {
+    padding: 0.375rem 0.75rem;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  nav.navbar-enhanced .nav-link,
+  .site-name-modern,
+  .lang-selector-modern,
+  .dropdown-modern,
+  .mobile-menu-modern .nav-link {
+    transition: none;
+    animation: none;
+  }
+  
+  .scroll-progress::after {
+    animation: none;
+  }
+}

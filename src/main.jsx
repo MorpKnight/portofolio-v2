@@ -7,6 +7,7 @@ import AllProjectsPage from './pages/all-projects-page.jsx';
 import ProjectDetailPage from './pages/project-detail-page.jsx';
 import LoadingSpinner from './components/loading-spinner.jsx';
 import ScrollToTop from './components/scroll-to-top.jsx';
+import { ThemeProvider } from './context/ThemeContext.jsx';
 
 import './i18next.js';
 import './index.css';
@@ -18,15 +19,17 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Suspense fallback={<LoadingSpinner />}>
       <BrowserRouter>
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<AppLayout />}>
-            <Route index element={<HomePage />} />
-            <Route path="projects" element={<AllProjectsPage />} />
-            <Route path="projects/:projectId" element={<ProjectDetailPage />} />
-            <Route path="minecraft" element={<MinecraftServerPage projectId="minecraft" />} />
-          </Route>
-        </Routes>
+        <ThemeProvider> {/* Wrap with ThemeProvider */}
+          <ScrollToTop />
+          <Routes>
+            <Route path="/" element={<AppLayout />}>
+              <Route index element={<HomePage />} />
+              <Route path="projects" element={<AllProjectsPage />} />
+              <Route path="projects/:projectId" element={<ProjectDetailPage />} />
+              <Route path="minecraft" element={<MinecraftServerPage projectId="minecraft" />} />
+            </Route>
+          </Routes>
+        </ThemeProvider>
       </BrowserRouter>
     </Suspense>
   </React.StrictMode>,

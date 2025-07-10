@@ -1,20 +1,18 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link as RouterLink, NavLink } from 'react-router-dom';
-import { Languages, ChevronDown } from 'lucide-react';
+import { Languages, ChevronDown, ArrowUp } from 'lucide-react';
 import Hamburger from 'hamburger-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
 export default function Navbar() {
   const { t, i18n } = useTranslation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
   const langDropdownRef = useRef(null);
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-    setIsLangDropdownOpen(false);
-  };
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
@@ -22,10 +20,38 @@ export default function Navbar() {
     setIsLangDropdownOpen(!isLangDropdownOpen);
   };
 
+  // Simplified scroll handling for sticky navbar
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (currentScrollY / totalHeight) * 100;
+      
+      // Update scroll progress
+      setScrollProgress(progress);
+      
+      // Update scrolled state for enhanced styling
+      setIsScrolled(currentScrollY > 50);
+      
+      // Show/hide scroll to top button
+      setShowScrollTop(currentScrollY > 500);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
     setIsLangDropdownOpen(false);
     closeMobileMenu();
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
 
   useEffect(() => {
@@ -76,37 +102,46 @@ export default function Navbar() {
     }
   };
 
-  const siteNameClassName = `
-    font-bold color-shift transition-colors
-    text-lg sm:text-xl md:text-xl lg:text-2xl
-    md:flex-shrink-0
-    whitespace-nowrap
-    truncate
-    max-w-full sm:max-w-xs md:max-w-sm lg:max-w-md
-  `;
-
   return (
-    <nav className="bg-neutral-800/80 backdrop-blur-md shadow-lg fixed w-full z-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <RouterLink
-            to="/"
-            className={siteNameClassName.trim()}
-            onClick={closeMobileMenu}
-          >
-            {t('siteName')}
-          </RouterLink>
+    <>
+      {/* Scroll Progress Bar */}
+      <div 
+        className="scroll-progress"
+        style={{ transform: `scaleX(${scrollProgress / 100})` }}
+      />
+      
+      <nav className={`navbar-enhanced bg-nav backdrop-blur-md shadow-lg fixed top-0 w-full z-50 border-b border-nav ${isScrolled ? 'scrolled' : ''}`}>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            <RouterLink
+              to="/"
+              className="site-name-modern"
+              onClick={closeMobileMenu}
+            >
+              {/* Full name for large screens */}
+              <span className="hidden xl:inline">
+                {t('siteName')}
+              </span>
+              {/* Medium name for medium screens */}
+              <span className="hidden md:inline xl:hidden">
+                {t('siteNameShort')}
+              </span>
+              {/* Short name for small screens */}
+              <span className="inline md:hidden">
+                {t('siteNameMobile')}
+              </span>
+            </RouterLink>
 
-          <div className="hidden lg:flex items-center space-x-1">
+            <div className="hidden lg:flex items-center space-x-1">
             {navLinksData.map((link) => (
               <NavLink
                 key={link.textKey}
                 to={link.href}
                 className={({ isActive }) =>
-                  `px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  `nav-link px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     isActive && !link.href.includes("#")
-                      ? "text-violet-400 bg-neutral-700"
-                      : "text-violet-200 hover:text-violet-400"
+                      ? "text-[color:var(--primary)] bg-[color:var(--nav-hover)] active"
+                      : "text-nav hover:text-[color:var(--nav-text-hover)] hover:bg-[color:var(--nav-hover)]"
                   }`
                 }
               >
@@ -116,40 +151,38 @@ export default function Navbar() {
             <div className="relative ml-3" ref={langDropdownRef}>
               <button
                 onClick={toggleLangDropdown}
-                className="text-violet-200 hover:text-violet-400 p-2 focus:outline-none flex items-center rounded-md hover:bg-neutral-700 transition-colors"
+                className="lang-selector-modern text-nav hover:text-[color:var(--nav-text-hover)] focus:outline-none flex items-center"
                 aria-label="Change language"
                 aria-haspopup="true"
                 aria-expanded={isLangDropdownOpen}
               >
                 <Languages size={20} />
-                <span className="ml-1 uppercase">{i18n.language}</span>
+                <span className="ml-2 uppercase font-medium">{i18n.language}</span>
                 <ChevronDown size={16} className={`ml-1 transform transition-transform duration-200 ${isLangDropdownOpen ? 'rotate-180' : ''}`} />
               </button>
-              {isLangDropdownOpen && (
-                <div className="absolute right-0 mt-2 w-32 bg-neutral-700 rounded-md shadow-xl py-1 z-50 border border-neutral-600">
-                  {languageOptions.map(lang => (
-                    <a
-                      key={lang.code}
-                      href="#"
-                      onClick={(e) => { e.preventDefault(); changeLanguage(lang.code); }}
-                      className={`block px-4 py-2 text-sm text-left ${i18n.language === lang.code ? 'text-violet-400 font-semibold bg-neutral-600' : 'text-violet-100'} hover:bg-neutral-600 hover:text-violet-300 transition-colors`}
-                    >
-                      {lang.code.toUpperCase()} - {t(`languageLabel.${lang.code}`, lang.label === 'EN' ? 'English' : '日本語')}
-                    </a>
-                  ))}
-                </div>
-              )}
+              <div className={`dropdown-modern absolute right-0 mt-2 w-40 z-50 ${isLangDropdownOpen ? 'show' : ''}`}>
+                {languageOptions.map(lang => (
+                  <a
+                    key={lang.code}
+                    href="#"
+                    onClick={(e) => { e.preventDefault(); changeLanguage(lang.code); }}
+                    className={`dropdown-item block text-sm text-left ${i18n.language === lang.code ? 'text-[color:var(--primary)] font-semibold' : 'text-[color:var(--text)]'}`}
+                  >
+                    {lang.code.toUpperCase()} - {t(`languageLabel.${lang.code}`, lang.label === 'EN' ? 'English' : '日本語')}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 
           <div className="lg:hidden flex items-center">
             <button
               onClick={() => changeLanguage(i18n.language === 'en' ? 'ja' : 'en')}
-              className="text-violet-200 hover:text-violet-400 p-2 focus:outline-none flex items-center rounded-md hover:bg-neutral-700 transition-colors mr-1"
+              className="lang-selector-modern text-nav hover:text-[color:var(--nav-text-hover)] focus:outline-none flex items-center mr-2"
               aria-label="Switch language"
             >
-              <Languages size={20} />
-              <span className="ml-1 uppercase">{i18n.language === 'en' ? 'JA' : 'EN'}</span>
+              <Languages size={18} />
+              <span className="ml-1 uppercase font-medium text-sm">{i18n.language === 'en' ? 'JA' : 'EN'}</span>
             </button>
             
             <div className="relative z-50">
@@ -157,7 +190,7 @@ export default function Navbar() {
                     toggled={isMobileMenuOpen}
                     toggle={setIsMobileMenuOpen}
                     size={24}
-                    color="rgb(221 214 254)"
+                    color="var(--nav-text)"
                     duration={0.6}
                     label={isMobileMenuOpen ? t('nav.closeMenu') : t('nav.openMenu')}
                     rounded
@@ -175,30 +208,45 @@ export default function Navbar() {
             animate="visible"
             exit="hidden"
             variants={menuVariants}
-            className="lg:hidden bg-neutral-800/95 backdrop-blur-sm absolute w-full shadow-lg left-0"
+            className="mobile-menu-modern lg:hidden absolute w-full left-0"
             style={{ top: '4rem' }} 
           >
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              {navLinksData.map((link) => (
-                <NavLink
-                  key={link.textKey}
-                  to={link.href}
-                  onClick={closeMobileMenu} 
-                  className={({ isActive }) =>
-                    `block px-3 py-2 rounded-md text-base font-medium transition-colors ${
-                      isActive && !link.href.includes("#")
-                        ? "text-violet-300 bg-neutral-700"
-                        : "text-violet-100 hover:bg-neutral-700 hover:text-violet-300"
-                    }`
-                  }
-                >
-                  {t(link.textKey)}
-                </NavLink>
-              ))}
-            </div>
+            {navLinksData.map((link) => (
+              <NavLink
+                key={link.textKey}
+                to={link.href}
+                onClick={closeMobileMenu} 
+                className={({ isActive }) =>
+                  `nav-link block text-base font-medium ${
+                    isActive && !link.href.includes("#")
+                      ? "text-[color:var(--primary)] bg-[color:var(--hover-bg)] active"
+                      : "text-nav hover:text-[color:var(--nav-text-hover)]"
+                  }`
+                }
+              >
+                {t(link.textKey)}
+              </NavLink>
+            ))}
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Floating Scroll to Top Button */}
+      <AnimatePresence>
+        {showScrollTop && (
+          <motion.button
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            onClick={scrollToTop}
+            className="scroll-to-top-btn fixed bottom-8 right-8 z-40 w-12 h-12 bg-[color:var(--primary)] hover:bg-[color:var(--secondary)] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group"
+            aria-label="Scroll to top"
+          >
+            <ArrowUp size={20} className="group-hover:scale-110 transition-transform duration-200" />
+          </motion.button>
+        )}
+      </AnimatePresence>
     </nav>
+    </>
   );
 }

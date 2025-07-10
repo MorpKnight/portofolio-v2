@@ -65,21 +65,21 @@ export default function AllProjectsPage() {
       animate="animate"
       exit="exit"
       variants={pageMotionProps}
-      className="bg-[#212121] text-violet-200 font-sans min-h-screen pt-24 pb-16"
+      className="bg-[color:var(--background)] text-[color:var(--text)] font-sans min-h-screen pt-24 pb-16"
     >
       <div className="container mx-auto px-6">
         <div className="text-center mb-12 pt-8">
-          <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 text-white color-shift">
+          <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 text-[color:var(--text)] color-shift">
             {t('projects:allProjectsPage.title')}
           </h1>
-          <p className="text-xl text-violet-300 max-w-2xl mx-auto">
+          <p className="text-xl text-[color:var(--secondary)] max-w-2xl mx-auto">
             {t('projects:allProjectsPage.description')}
           </p>
         </div>
 
         <div className="mb-6 flex flex-wrap gap-4">
           <select
-            className="bg-neutral-800 text-violet-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+            className="bg-[color:var(--card-bg)] text-[color:var(--text)] px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[color:var(--primary)] border border-[color:var(--card-border)] min-w-[150px]"
             value={selectedFramework}
             onChange={(e) => setSelectedFramework(e.target.value)}
           >
@@ -91,7 +91,7 @@ export default function AllProjectsPage() {
           </select>
 
           <select
-            className="bg-neutral-800 text-violet-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+            className="bg-[color:var(--card-bg)] text-[color:var(--text)] px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[color:var(--primary)] border border-[color:var(--card-border)] min-w-[150px]"
             value={selectedType}
             onChange={(e) => setSelectedType(e.target.value)}
           >
@@ -103,7 +103,7 @@ export default function AllProjectsPage() {
           </select>
 
           <select
-            className="bg-neutral-800 text-violet-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+            className="bg-[color:var(--card-bg)] text-[color:var(--text)] px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[color:var(--primary)] border border-[color:var(--card-border)] min-w-[150px]"
             value={selectedLanguage}
             onChange={(e) => setSelectedLanguage(e.target.value)}
           >
@@ -116,7 +116,7 @@ export default function AllProjectsPage() {
           </select>
 
           <select
-            className="bg-neutral-800 text-violet-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+            className="bg-[color:var(--card-bg)] text-[color:var(--text)] px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[color:var(--primary)] border border-[color:var(--card-border)] min-w-[150px]"
             value={selectedTools}
             onChange={(e) => setSelectedTools(e.target.value)}
           >
@@ -133,7 +133,7 @@ export default function AllProjectsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project) => (
               <Link to={`/projects/${encodeURIComponent(project.id)}`} key={project.id} className="block group">
-                <div className="bg-neutral-800 rounded-lg shadow-xl overflow-hidden flex flex-col h-full transition-all duration-300 group-hover:shadow-violet-500/30 group-hover:scale-[1.02]">
+                <div className="bg-[color:var(--card-bg)] rounded-lg shadow-xl overflow-hidden flex flex-col h-full transition-all duration-300 group-hover:shadow-lg group-hover:scale-[1.02] border border-[color:var(--card-border)]">
                   {project.images && project.images.length > 0 ? (
                     <Slider {...carouselSettings}>
                       {project.images.map((imgUrl, idx) => (
@@ -161,26 +161,26 @@ export default function AllProjectsPage() {
                     />
                   )}
                   <div className="p-6 flex flex-col flex-grow">
-                    <h3 className="text-2xl font-semibold mb-2 text-violet-400 group-hover:text-violet-300">{project.title}</h3>
-                    <p className="text-violet-300 text-sm leading-relaxed mb-4 flex-grow custom-scrollbar h-28 overflow-y-auto">
+                    <h3 className="text-2xl font-semibold mb-2 text-[color:var(--primary)] group-hover:text-[color:var(--secondary)]">{project.title}</h3>
+                    <p className="text-[color:var(--text)] text-sm leading-relaxed mb-4 flex-grow custom-scrollbar h-28 overflow-y-auto">
                       {project.description}
                     </p>
                     {project.tags && project.tags.length > 0 && (
                       <div className="mb-4 flex flex-wrap gap-2">
                         {project.tags.map(tag => (
-                          <span key={tag} className="inline-block bg-neutral-700 text-violet-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">
+                          <span key={tag} className="inline-block bg-[color:var(--background-1)] text-[color:var(--secondary)] text-xs font-semibold px-2.5 py-0.5 rounded-full border border-[color:var(--card-border)]">
                             {tag}
                           </span>
                         ))}
                       </div>
                     )}
-                    <div className="mt-auto flex items-center space-x-4 pt-4 border-t border-neutral-700/50">
+                    <div className="mt-auto flex items-center space-x-4 pt-4 border-t border-[color:var(--card-border)]">
                       {project.liveLink && project.liveLink !== "#" && (
                         <a
                           href={project.liveLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="bg-violet-500 hover:bg-violet-600 text-white font-semibold px-4 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105 inline-flex items-center"
+                          className="btn-theme-primary font-semibold px-4 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105 inline-flex items-center"
                         >
                           Live Demo <ExternalLink size={16} className="ml-2" />
                         </a>
@@ -190,7 +190,7 @@ export default function AllProjectsPage() {
                           href={project.repoLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="bg-neutral-700 hover:bg-neutral-600 text-violet-300 font-semibold px-4 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105 inline-flex items-center"
+                          className="btn-theme-secondary font-semibold px-4 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105 inline-flex items-center"
                         >
                           GitHub <Github size={16} className="ml-2" />
                         </a>
@@ -200,7 +200,7 @@ export default function AllProjectsPage() {
                           href={project.repoLinkFE}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="bg-neutral-700 hover:bg-neutral-600 text-violet-300 font-semibold px-4 py-2 rounded-lg inline-flex items-center"
+                          className="btn-theme-secondary font-semibold px-4 py-2 rounded-lg inline-flex items-center"
                         >
                           GitHub FE <Github size={16} className="ml-2" />
                         </a>
@@ -210,7 +210,7 @@ export default function AllProjectsPage() {
                           href={project.repoLinkBE}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="bg-neutral-700 hover:bg-neutral-600 text-violet-300 font-semibold px-4 py-2 rounded-lg inline-flex items-center"
+                          className="btn-theme-secondary font-semibold px-4 py-2 rounded-lg inline-flex items-center"
                         >
                           GitHub BE <Github size={16} className="ml-2" />
                         </a>
@@ -222,13 +222,13 @@ export default function AllProjectsPage() {
             ))}
           </div>
         ) : (
-          <p className="text-center text-violet-300 text-xl">{t('projects:allProjectsPage.noProjects')}</p>
+          <p className="text-center text-[color:var(--secondary)] text-xl">{t('projects:allProjectsPage.noProjects')}</p>
         )}
 
         <div className="text-center mt-16">
           <Link
             to="/#projects"
-            className="bg-violet-500 hover:bg-violet-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition-transform transform hover:scale-105"
+            className="btn-theme-primary font-semibold px-6 py-3 rounded-lg shadow-md transition-transform transform hover:scale-105"
           >
             {t('projects:allProjectsPage.backToHome')}
           </Link>
