@@ -24,18 +24,20 @@ export default function ContactMe({ socialLinks }) {
             {t('contactMe.description')}
           </p>
         </div>
-        <div className="max-w-lg mx-auto bg-[color:var(--card-bg)]/90 backdrop-blur-sm p-8 rounded-lg shadow-xl border border-[color:var(--card-border)]">
-          <p className="text-lg text-center text-[color:var(--text)]">
+        <div className="max-w-lg mx-auto enhanced-card p-8 rounded-lg">
+          <p className="text-lg text-center text-[color:var(--text)] mb-2">
             {t('contactMe.emailPrompt').replace('christoffelsihombing@gmail.com', '')}
-            <a href="mailto:christoffelsihombing@gmail.com" className="underline">
+          </p>
+          <div className="text-center mb-6">
+            <a href="mailto:christoffelsihombing@gmail.com" className="text-[color:var(--primary)] hover:text-[color:var(--secondary)] font-semibold text-xl underline decoration-2 underline-offset-4">
               christoffelsihombing@gmail.com
             </a>
-          </p>
+          </div>
 
-          <div className="text-center mt-6">
+          <div className="text-center">
             <button
               onClick={openForm}
-              className="bg-[color:var(--primary)] hover:bg-[color:var(--secondary)] text-white font-semibold px-6 py-3 rounded-lg shadow-md transition-transform transform hover:scale-105 inline-flex items-center"
+              className="btn-enhanced inline-flex items-center"
             >
               <Send size={18} className="mr-2" />
               {t('contactMe.openFormButton')}

@@ -24,7 +24,7 @@ projectDetailPage:
   projectNotFoundTitle: Project Not Found
   projectNotFoundDescription: The project you are looking for does not exist or the
     ID is incorrect. Please check the URL or go back to all projects.
-  backToAllProjects: ← Back to All Projects
+  backToAllProjects: Back to All Projects
 projectsData:
   - id: eVotingPemiraFTUI2024
     title: PEMIRA FTUI 2024 eVoting Application

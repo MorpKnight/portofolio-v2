@@ -137,7 +137,7 @@ downloadCV:
   description: "Interested in learning more about my professional background? Download my CV for a detailed review."
   buttonText: "Download CV"
   portofolioButtonText: "Download Portfolio"
-  fileNameNote: "(CV File Name: Giovan_Sihombing.pdf - Ensure the file is in the `public` directory.)"
+  fileNameNote: "(CV File Name: Giovan_Sihombing.pdf)"
 
 contactMe:
   title: "Contact Me"

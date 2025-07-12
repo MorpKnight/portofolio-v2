@@ -166,15 +166,15 @@ export default function ProjectDetailPage() {
             )}
 
             {(project.liveLink || project.repoLink || project.repoLinkFE || project.repoLinkBE) && (
-              <div className="mt-8 pt-6 border-t border-neutral-700">
-                <h2 className="text-2xl font-semibold text-[color:var(--secondary)] mb-4">{t('projects:projectDetailPage.projectLinksLabel', 'Project Links')}</h2>
+              <div className="mt-8 pt-6 border-t border-[color:var(--card-border)]">
+                <h2 className="text-2xl font-semibold text-[color:var(--primary)] mb-4">{t('projects:projectDetailPage.projectLinksLabel', 'Project Links')}</h2>
                 <div className="flex flex-wrap gap-4 items-center">
                   {project.liveLink && project.liveLink !== "#" && (
                     <a
                       href={project.liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-[color:var(--primary)] hover:bg-[color:var(--secondary)] text-white font-semibold px-5 py-2.5 rounded-lg shadow-md transition-all transform hover:scale-105 inline-flex items-center text-sm"
+                      className="btn-enhanced text-sm inline-flex items-center"
                     >
                       {t('projects:allProjectsPage.liveLink', 'Live Demo')} <ExternalLink size={16} className="ml-2" />
                     </a>
@@ -184,7 +184,7 @@ export default function ProjectDetailPage() {
                       href={project.repoLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-neutral-700 hover:bg-neutral-600 text-[color:var(--secondary)] font-semibold px-5 py-2.5 rounded-lg shadow-md transition-all transform hover:scale-105 inline-flex items-center text-sm"
+                      className="btn-enhanced-secondary text-sm inline-flex items-center"
                     >
                       {t('projects:allProjectsPage.repoLink', 'GitHub')} <Github size={16} className="ml-2" />
                     </a>
@@ -194,7 +194,7 @@ export default function ProjectDetailPage() {
                       href={project.repoLinkFE}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-neutral-700 hover:bg-neutral-600 text-[color:var(--secondary)] font-semibold px-5 py-2.5 rounded-lg transition-all transform hover:scale-105 inline-flex items-center text-sm"
+                      className="btn-enhanced-secondary text-sm inline-flex items-center"
                     >
                       {t('projects:allProjectsPage.repoLink', 'GitHub')} FE <Github size={16} className="ml-2" />
                     </a>
@@ -204,7 +204,7 @@ export default function ProjectDetailPage() {
                       href={project.repoLinkBE}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-neutral-700 hover:bg-neutral-600 text-[color:var(--secondary)] font-semibold px-5 py-2.5 rounded-lg transition-all transform hover:scale-105 inline-flex items-center text-sm"
+                      className="btn-enhanced-secondary text-sm inline-flex items-center"
                     >
                       {t('projects:allProjectsPage.repoLink', 'GitHub')} BE <Github size={16} className="ml-2" />
                     </a>

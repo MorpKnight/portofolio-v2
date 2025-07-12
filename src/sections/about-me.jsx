@@ -71,14 +71,14 @@ function About() {
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
               {skillCategories.map((category) => (
-                <div key={category.title} className="bg-[color:var(--card-bg)] p-4 rounded-lg shadow-md border border-[color:var(--card-border)]">
-                  <h4 className="text-lg font-semibold text-[color:var(--secondary)] mb-3 flex items-center">
+                <div key={category.title} className="skill-item">
+                  <h4 className="text-lg font-semibold text-[color:var(--primary)] mb-3 flex items-center">
                     {category.icon}
                     {category.title}
                   </h4>
-                  <ul className="space-y-1.5">
+                  <ul className="space-y-2">
                     {category.skills.map((skill) => (
-                      <li key={skill} className="text-[color:var(--text)]/90 text-sm flex items-start">
+                      <li key={skill} className="text-[color:var(--text)] text-sm flex items-start">
                         <svg 
                           xmlns="http://www.w3.org/2000/svg" 
                           width="14" 
@@ -89,7 +89,7 @@ function About() {
                           strokeWidth="2.5"
                           strokeLinecap="round" 
                           strokeLinejoin="round" 
-                          className="text-[color:var(--accent)] mr-2 mt-0.5 flex-shrink-0"
+                          className="text-[color:var(--primary)] mr-2 mt-0.5 flex-shrink-0"
                         >
                           <polyline points="20 6 9 17 4 12"></polyline>
                         </svg>

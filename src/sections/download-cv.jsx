@@ -18,11 +18,11 @@ export default function DownloadCV() {
           </p>
         </div>
         <div className="text-center">
-          <div className="flex flex-col md:flex-row justify-center items-center">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4">
             <a
               href="/Giovan_Sihombing.pdf"
               download
-              className="bg-[color:var(--primary)] hover:bg-[color:var(--secondary)] text-white font-semibold px-8 py-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 text-lg inline-flex items-center"
+              className="btn-enhanced text-lg inline-flex items-center"
             >
               <Download size={20} className="mr-2" />
               {t('downloadCV.buttonText')}
@@ -30,13 +30,13 @@ export default function DownloadCV() {
             <a
               href="/Giovan_Portofolio.pdf"
               download
-              className="bg-[color:var(--primary)] hover:bg-[color:var(--secondary)] text-white font-semibold px-8 py-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 text-lg inline-flex items-center mt-4 md:mt-0 md:ml-4"
+              className="btn-enhanced-secondary text-lg inline-flex items-center"
             >
               <Download size={20} className="mr-2" />
               {t('downloadCV.portofolioButtonText')}
             </a>
           </div>
-          <p className="text-[color:var(--secondary)] text-sm mt-4">
+          <p className="text-[color:var(--text)] text-sm mt-6 bg-[color:var(--background-1)] inline-block px-4 py-2 rounded-full border border-[color:var(--card-border)]">
             {t('downloadCV.fileNameNote')}
           </p>
         </div>

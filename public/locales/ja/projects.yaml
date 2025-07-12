@@ -23,7 +23,7 @@ projectDetailPage:
   implementationLabel: 実装詳細
   projectNotFoundTitle: プロジェクトが見つかりません
   projectNotFoundDescription: お探しのプロジェクトが存在しないか、IDが間違っています。URLを確認するか、全プロジェクト一覧に戻ってください。
-  backToAllProjects: ← 全プロジェクトに戻る
+  backToAllProjects: 全プロジェクトに戻る
 projectsData:
   - id: eVoting Pemira FTUI2024
     title: PEMIRA FTUI 2024 eVotingアプリケーション

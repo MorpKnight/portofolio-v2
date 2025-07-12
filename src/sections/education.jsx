@@ -15,17 +15,17 @@ function Education() {
         </div>
         <div className="max-w-3xl mx-auto space-y-8">
           {educationData.map((edu, index) => (
-            <div key={index} className="bg-[color:var(--card-bg)] backdrop-blur-sm p-6 rounded-lg shadow-lg border border-[color:var(--card-border)]">
-              <h3 className="text-xl font-semibold text-[color:var(--secondary)]">{edu.institution}</h3>
-              <p className="text-[color:var(--primary)] font-medium">{edu.degree}</p>
-              <p className="text-sm text-[color:var(--text)] mb-1">{edu.period}</p>
-              {edu.gpa && <p className="text-sm text-[color:var(--text)] mb-2">{t('education.gpaLabel', { gpa: edu.gpa })}</p>}
+            <div key={index} className="enhanced-card p-6 rounded-lg">
+              <h3 className="text-xl font-semibold text-[color:var(--primary)] mb-1">{edu.institution}</h3>
+              <p className="text-[color:var(--secondary)] font-medium text-lg mb-1">{edu.degree}</p>
+              <p className="text-sm text-[color:var(--text-muted)] mb-2">{edu.period}</p>
+              {edu.gpa && <p className="text-sm text-[color:var(--text)] font-medium mb-3 bg-[color:var(--background-1)] inline-block px-3 py-1 rounded-full">{t('education.gpaLabel', { gpa: edu.gpa })}</p>}
               {edu.achievements && edu.achievements.length > 0 && (
                 <div>
-                  <h4 className="font-semibold text-[color:var(--text)] mt-2 mb-1">{t('education.achievementsTitle')}</h4>
-                  <ul className="list-disc list-inside text-[color:var(--text)]/90 text-sm space-y-1">
+                  <h4 className="font-semibold text-[color:var(--text)] mt-3 mb-2">{t('education.achievementsTitle')}</h4>
+                  <ul className="list-disc list-inside text-[color:var(--text)] text-sm space-y-1 ml-4">
                     {edu.achievements.map((ach, achIndex) => (
-                      <li key={achIndex}>{ach}</li>
+                      <li key={achIndex} className="marker:text-[color:var(--primary)]">{ach}</li>
                     ))}
                   </ul>
                 </div>

@@ -57,13 +57,13 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
             <a
               href="#projects"
-              className="btn-theme-primary font-semibold px-8 py-3 rounded-lg shadow-md transition-transform transform hover:scale-105 text-lg w-full sm:w-auto"
+              className="btn-enhanced text-lg w-full sm:w-auto inline-flex items-center justify-center"
             >
               {t('homePage.viewProjects')}
             </a>
             <a
               href="#contact"
-              className="btn-theme-secondary font-semibold px-8 py-3 rounded-lg shadow-md transition-transform transform hover:scale-105 text-lg w-full sm:w-auto"
+              className="btn-enhanced-secondary text-lg w-full sm:w-auto inline-flex items-center justify-center"
             >
               {t('homePage.contactMe')}
             </a>

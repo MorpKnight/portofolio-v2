@@ -137,7 +137,7 @@ downloadCV:
   description: "私の職務経歴についてさらに詳しく知りたいですか？詳細なレビューのために私の履歴書をダウンロードしてください。"
   buttonText: "履歴書ダウンロード"
   portofolioButtonText: "ポートフォリオをダウンロード"
-  fileNameNote: "(履歴書ファイル名: Giovan_Sihombing.pdf - ファイルが `public` ディレクトリにあることを確認してください。)"
+  fileNameNote: "(履歴書ファイル名: Giovan_Sihombing.pdf)"
 
 contactMe:
   title: "お問い合わせ"

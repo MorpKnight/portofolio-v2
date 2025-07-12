@@ -15,13 +15,13 @@ function Experience() {
         </div>
         <div className="max-w-3xl mx-auto space-y-8">
           {employmentHistory.map((job, index) => (
-            <div key={index} className="bg-[color:var(--card-bg)] backdrop-blur-sm p-6 rounded-lg shadow-lg border border-[color:var(--card-border)]">
-              <h3 className="text-xl font-semibold text-[color:var(--secondary)]">{job.position}</h3>
-              <p className="text-[color:var(--primary)] font-medium">{job.company} - {job.location}</p>
-              <p className="text-sm text-[color:var(--text)] mb-2">{job.period}</p>
-              <ul className="list-disc list-inside text-[color:var(--text)]/90 text-sm space-y-1">
+            <div key={index} className="enhanced-card p-6 rounded-lg">
+              <h3 className="text-xl font-semibold text-[color:var(--primary)] mb-1">{job.position}</h3>
+              <p className="text-[color:var(--secondary)] font-medium text-lg mb-1">{job.company} - {job.location}</p>
+              <p className="text-sm text-[color:var(--text-muted)] mb-3">{job.period}</p>
+              <ul className="list-disc list-inside text-[color:var(--text)] text-sm space-y-1 ml-4">
                 {job.responsibilities.map((resp, respIndex) => (
-                  <li key={respIndex}>{resp}</li>
+                  <li key={respIndex} className="marker:text-[color:var(--primary)]">{resp}</li>
                 ))}
               </ul>
             </div>

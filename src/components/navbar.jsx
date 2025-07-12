@@ -16,6 +16,15 @@ export default function Navbar() {
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
+  const handleNameClick = () => {
+    closeMobileMenu();
+    // Scroll to top smoothly
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   const toggleLangDropdown = () => {
     setIsLangDropdownOpen(!isLangDropdownOpen);
   };
@@ -25,9 +34,13 @@ export default function Navbar() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = (currentScrollY / totalHeight) * 100;
       
-      // Update scroll progress
+      // Ensure we have a valid calculation
+      if (totalHeight <= 0) return;
+      
+      const progress = Math.min(Math.max((currentScrollY / totalHeight) * 100, 0), 100);
+      
+      // Update scroll progress - always show when there's any scroll
       setScrollProgress(progress);
       
       // Update scrolled state for enhanced styling
@@ -37,8 +50,16 @@ export default function Navbar() {
       setShowScrollTop(currentScrollY > 500);
     };
 
+    // Initial call to set correct state
+    handleScroll();
+    
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleScroll, { passive: true }); // Handle resize events
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
   }, []);
 
   const changeLanguage = (lng) => {
@@ -104,19 +125,22 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Scroll Progress Bar */}
+      {/* Scroll Progress Bar - positioned below navbar */}
       <div 
         className="scroll-progress"
-        style={{ transform: `scaleX(${scrollProgress / 100})` }}
+        style={{ 
+          transform: `scaleX(${Math.max(scrollProgress / 100, 0)})`,
+          opacity: scrollProgress > 0 ? 1 : 0.3 // Always slightly visible, fully visible when scrolling
+        }}
       />
       
-      <nav className={`navbar-enhanced bg-nav backdrop-blur-md shadow-lg fixed top-0 w-full z-50 border-b border-nav ${isScrolled ? 'scrolled' : ''}`}>
+      <nav className={`fixed top-0 w-full z-50 backdrop-blur-md transition-all duration-300 ${isScrolled ? 'bg-[color:var(--nav-bg-scrolled)] shadow-lg border-b border-transparent' : 'bg-[color:var(--nav-bg)] border-b border-[color:var(--border-color)]'}`}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <RouterLink
               to="/"
               className="site-name-modern"
-              onClick={closeMobileMenu}
+              onClick={handleNameClick}
             >
               {/* Full name for large screens */}
               <span className="hidden xl:inline">
@@ -230,8 +254,8 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* Floating Scroll to Top Button */}
+    </nav>
+          {/* Floating Scroll to Top Button */}
       <AnimatePresence>
         {showScrollTop && (
           <motion.button
@@ -239,14 +263,13 @@ export default function Navbar() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
             onClick={scrollToTop}
-            className="scroll-to-top-btn fixed bottom-8 right-8 z-40 w-12 h-12 bg-[color:var(--primary)] hover:bg-[color:var(--secondary)] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group"
+            className="scroll-to-top-btn fixed top-20 right-4 z-40 w-12 h-12 bg-[color:var(--primary)] hover:bg-[color:var(--secondary)] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group"
             aria-label="Scroll to top"
           >
             <ArrowUp size={20} className="group-hover:scale-110 transition-transform duration-200" />
           </motion.button>
         )}
       </AnimatePresence>
-    </nav>
     </>
   );
 }

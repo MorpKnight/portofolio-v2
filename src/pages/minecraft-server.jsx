@@ -8,7 +8,7 @@ const MinecraftServerPage = () => {
   const { t } = useTranslation();
 
   // Informasi Server - Ganti dengan data Anda
-  const minecraftVersion = '1.20.1'; // Contoh versi
+  const minecraftVersion = '1.21.6'; // Contoh versi
 
   // Tautan Unduhan - Ganti dengan URL unduhan yang sebenarnya
   const minecraftDownloadLink = '#'; // Ganti dengan tautan unduhan Minecraft (misal, ke website resmi jika relevan)
